@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG SaaS</title>
+</head>
+<body>
+    <h1>RAG SaaS System</h1>
+    <nav>
+        <a href="{% url 'rag_app:upload_document' %}">Upload Document</a> |
+        <a href="{% url 'rag_app:document_list' %}">Document List</a>
+    </nav>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
