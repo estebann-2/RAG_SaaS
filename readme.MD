@@ -21,6 +21,7 @@ This project integrates **Django, Celery, FAISS, and LLMs** (such as OpenAI, Lla
 
 ## 📂 Project Structure
 
+```
 RAG_SaaS/                        # Root Django Project
 │
 ├── manage.py                     # Django's management script
@@ -95,7 +96,7 @@ RAG_SaaS/                        # Root Django Project
     ├── scripts/                       # Useful scripts for automation
     │   ├── setup_db.sh                # Script to set up the database
     │   ├── run_celery.sh              # Script to run Celery workers
-
+```
 
 ## 🛠️ Installation & Setup
 
