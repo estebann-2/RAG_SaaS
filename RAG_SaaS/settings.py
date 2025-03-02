@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'RAG_SaaS.urls'
 
 TEMPLATES = [
@@ -139,3 +140,17 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_ROOT = BASE_DIR / 'static'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+LOGIN_REDIRECT_URL = '/home/'  # Redirige a la página principal después del login
+LOGOUT_REDIRECT_URL = '/login/'  # Redirige a login después del logout
+
+LOGIN_URL = '/login/'  # Redirects to your defined login page
+
+
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Usamos Redis como broker
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'

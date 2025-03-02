@@ -1,11 +1,13 @@
 from django.urls import path
-from . import views
+from .views import register_user, login_view, logout_view, home, upload_document, document_list, query_document
 
-app_name = 'rag_app'
 
 urlpatterns = [
-    path('', views.home, name='home'),  # Default homepage
-    path('upload/', views.upload_document, name='upload_document'),
-    path('documents/', views.document_list, name='document_list'),
-    path('query/<int:document_id>/', views.query_document, name='query_document'),
+    path('register/', register_user, name='register'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('', home, name='home'),  # Homepage
+    path('upload/', upload_document, name='upload_document'),
+    path('documents/', document_list, name='document_list'),
+    path('query/<int:document_id>/', query_document, name='query_document'),
 ]

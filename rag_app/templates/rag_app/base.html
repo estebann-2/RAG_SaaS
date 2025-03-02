@@ -1,16 +1,51 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAG SaaS</title>
+    <link rel="stylesheet" href="{% static 'rag_app/css/styles_v3.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'rag_app/favicon/favicon.ico' %}">
 </head>
 <body>
-    <h1>RAG SaaS System</h1>
-    <nav>
-        <a href="{% url 'rag_app:upload_document' %}">Upload Document</a> |
-        <a href="{% url 'rag_app:document_list' %}">Document List</a>
-    </nav>
-    <hr>
-    {% block content %}
-    {% endblock %}
+
+    <div class="container">
+        
+        <!-- Separate Box for the Title -->
+        <div class="title-box">
+            <h1 class="app-title">RAG SaaS</h1>
+        </div>
+
+        <!-- Top Section: Welcome Message & Buttons -->
+        <div class="top-box">
+            {% if user.is_authenticated %}
+            <p class="welcome-message">Bienvenido, <strong>{{ user.username }}</strong></p>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <a href="{% url 'upload_document' %}" class="action-button">📤 Subir Documento</a>
+                <a href="{% url 'document_list' %}" class="action-button">📂 Mis Documentos</a>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Main Content (Child Templates Extend This) -->
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- Logout Section at the Bottom -->
+        {% if user.is_authenticated %}
+        <div class="bottom-box">
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="logout-button">Cerrar sesión</button>
+            </form>
+        </div>
+        {% endif %}
+
+    </div>
+
 </body>
 </html>
