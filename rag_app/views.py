@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
 from django.contrib.auth import login, logout, authenticate
@@ -7,7 +8,9 @@ from django.contrib.auth.decorators import login_required
 from .models import Document, Message, Conversation
 from .forms import DocumentUploadForm, RegisterForm, MessageForm
 import os
-from .tasks import process_document
+from .utils import process_document, query_llm
+from .retriever import retrieve_relevant_chunks
+import logging
 
 # ✅ User Registration
 def register_user(request):
@@ -70,11 +73,13 @@ def upload_document(request):
             conversation=conversation  # ✅ Link document to conversation
         )
 
+        # ✅ Process document for chunking & embedding (async recommended)
+        process_document(document)
+
         # ✅ Create a system message to confirm the document upload
         Message.objects.create(
             conversation=conversation,
             sender=request.user,  # Keeping sender as user for now
-            role="assistant",
             text=f"📂 Documento '{document_name}' procesado y listo para consultas."
         )
 
@@ -85,6 +90,22 @@ def upload_document(request):
         })
 
     return JsonResponse({"success": False, "error": "No se proporcionó un archivo."})
+
+    #     # ✅ Create a system message to confirm the document upload
+    #     Message.objects.create(
+    #         conversation=conversation,
+    #         sender=request.user,  # Keeping sender as user for now
+    #         role="assistant",
+    #         text=f"📂 Documento '{document_name}' procesado y listo para consultas."
+    #     )
+
+    #     return JsonResponse({
+    #         "success": True,
+    #         "response": f"Documento '{document_name}' subido y procesado.",
+    #         "conversation_id": conversation.id
+    #     })
+
+    # return JsonResponse({"success": False, "error": "No se proporcionó un archivo."})
 
 
 @login_required
@@ -141,15 +162,45 @@ def send_message(request, conversation_id):
     if request.method == "POST":
         form = MessageForm(request.POST)
         if form.is_valid():
-            # Save user message
+            # ✅ Save user message
             user_message = form.save(commit=False)
             user_message.conversation = conversation
             user_message.sender = request.user
-            user_message.role = "user"  # Explicitly setting user role
+            user_message.role = "user"
             user_message.save()
 
-            # Simulated LLM response
-            llm_response = f"Respuesta generada para: {user_message.text[:50]}..."  # Simulate LLM output
+            # # ✅ Retrieve relevant chunks
+            # relevant_chunks = retrieve_relevant_chunks(user_message.text)
+            # context_text = "\n\n".join(chunk.content for chunk in relevant_chunks)
+            # prompt = f"Context:\n{context_text}\n\nUser Query: {user_message.text}"
+
+            # # ✅ Get LLM response
+            # llm_response = query_llm(prompt)
+
+            # # ✅ Save LLM response
+            # assistant_user, _ = User.objects.get_or_create(username="Assistant", defaults={"is_active": False})  # Create assistant if not exists
+            # Message.objects.create(
+            #     conversation=conversation,
+            #     sender=assistant_user,  # Assign to the assistant user
+            #     role="assistant",
+            #     text=llm_response
+            # )
+
+            # Retrieve relevant chunks
+            relevant_chunks = retrieve_relevant_chunks(user_message.text, conversation, top_k=3)
+
+            # Log retrieved chunks
+            chunk_info = "\n".join([f"Chunk {c['chunk_id']} from {c['document']}: {c['content'][:50]}..." for c in relevant_chunks])
+            logging.info(f"🔍 Relevant Chunks Used:\n{chunk_info}")
+
+            # Format prompt for LLM
+            context_text = "\n\n".join([f"Document: {c['document']}\nChunk {c['chunk_id']}:\n{c['content']}" for c in relevant_chunks])
+            prompt = f"Context:\n{context_text}\n\nUser Query: {user_message.text}"
+
+            # Query the LLM
+            llm_response = query_llm(prompt)
+
+            
 
             # Save LLM response
             Message.objects.create(

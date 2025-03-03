@@ -64,3 +64,11 @@ class Message(models.Model):
 
     def __str__(self):
         return f"{self.sender.username} ({self.role}): {self.text[:30]}"
+    
+class Chunk(models.Model):
+    document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name="chunks")
+    content = models.TextField()
+    embedding = models.JSONField()  # Store embedding as a JSON array
+
+    def __str__(self):
+        return f"Chunk from {self.document.title}"    
