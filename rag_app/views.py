@@ -4,25 +4,25 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Document, Query
-from .forms import DocumentUploadForm, QueryForm, RegisterForm
+from .models import Document, Message, Conversation
+from .forms import DocumentUploadForm, RegisterForm, MessageForm
 import os
 from .tasks import process_document
 
-# Vista para registrar usuarios
+# ✅ User Registration
 def register_user(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)  # Autenticación automática después del registro
+            login(request, user)  # Auto-login after registration
             messages.success(request, "Registro exitoso. Bienvenido!")
             return redirect('document_list')
     else:
         form = RegisterForm()
     return render(request, 'rag_app/register.html', {'form': form})
 
-# Login view
+# ✅ User Login
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -38,56 +38,127 @@ def login_view(request):
     
     return render(request, 'rag_app/login.html', {'form': form})
 
-# Logout view
+# ✅ User Logout
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
         messages.info(request, "Has cerrado sesión correctamente.")
         return redirect('login')
 
-
-# Create your views here.
-
 @login_required
 def home(request):
-    return render(request, 'rag_app/base.html')
+    conversations = Conversation.objects.filter(user=request.user).order_by("-created_at")  # Show newest first
+    return render(request, 'rag_app/base.html', {'conversations': conversations})
+
 
 @login_required
 def upload_document(request):
+    if request.method == "POST" and request.FILES.get("document"):
+        uploaded_file = request.FILES["document"]
+
+        # ✅ Extract the filename (without extension)
+        document_name = os.path.splitext(uploaded_file.name)[0]
+
+        # ✅ Ensure a conversation is created using the document title
+        conversation = Conversation.objects.create(user=request.user, title=document_name)
+
+        # ✅ Save the uploaded document and link it to the conversation
+        document = Document.objects.create(
+            user=request.user,
+            file=uploaded_file,
+            title=document_name,  # ✅ Store the document name
+            conversation=conversation  # ✅ Link document to conversation
+        )
+
+        # ✅ Create a system message to confirm the document upload
+        Message.objects.create(
+            conversation=conversation,
+            sender=request.user,  # Keeping sender as user for now
+            role="assistant",
+            text=f"📂 Documento '{document_name}' procesado y listo para consultas."
+        )
+
+        return JsonResponse({
+            "success": True,
+            "response": f"Documento '{document_name}' subido y procesado.",
+            "conversation_id": conversation.id
+        })
+
+    return JsonResponse({"success": False, "error": "No se proporcionó un archivo."})
+
+
+@login_required
+def conversation_history(request):
+    conversations = Conversation.objects.filter(user=request.user).order_by("-created_at")
+
+    print(f"User {request.user.username} is viewing conversation history.")
+    print(f"Found {conversations.count()} conversations for this user.")
+
+    for convo in conversations:
+        print(f"ID: {convo.id}, Title: {convo.title}, Created: {convo.created_at}")
+
+    return render(request, 'rag_app/conversation_history.html', {'conversations': conversations})
+
+
+
+@login_required
+def start_conversation(request):
     if request.method == "POST":
-        form = DocumentUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            document = form.save(commit=False)  # Don't save yet
-            document.user = request.user  # Assign the logged-in user
-            document.save()  # Now save
-            process_document.delay(document.id)  # Process document asynchronously
-            messages.success(request, "Documento subido exitosamente. Se procesará en segundo plano.")
-            return redirect('document_list')  # Redirect to the document list
-    else:
-        form = DocumentUploadForm()
-    
-    return render(request, 'rag_app/upload.html', {'form': form})
+        title = request.POST.get("title", "Nueva Conversación")
+        conversation = Conversation.objects.create(user=request.user, title=title)
+        return redirect("conversation_detail", conversation_id=conversation.id)
+
+    return render(request, "rag_app/start_conversation.html")
 
 @login_required
-def document_list(request):
-    documents = Document.objects.all()
-    return render(request, 'rag_app/document_list.html', {'documents': documents})
+def start_conversation(request):
+    if request.method == "POST":
+        title = request.POST.get("title", "Nueva Conversación")
+        conversation = Conversation.objects.create(user=request.user, title=title)
+        return redirect("conversation_detail", conversation_id=conversation.id)
 
-# Query Endpoint
+    return render(request, "rag_app/start_conversation.html")
+
+
+# ✅ View a Specific Conversation & Messages
 @login_required
-def query_document(request, document_id):
-    document = get_object_or_404(Document, id=document_id)
-    if request.method == 'POST':
-        form = QueryForm(request.POST)
+def conversation_detail(request, conversation_id):
+    conversation = get_object_or_404(Conversation, id=conversation_id, user=request.user)
+    messages = conversation.messages.select_related("sender").order_by("timestamp")  # Optimized query
+    form = MessageForm()
+
+    return render(request, "rag_app/conversation_detail.html", {
+        "conversation": conversation,
+        "messages": messages,
+        "form": form
+    })
+
+# ✅ Send a Message and Get Response from LLM
+@login_required
+def send_message(request, conversation_id):
+    conversation = get_object_or_404(Conversation, id=conversation_id, user=request.user)
+
+    if request.method == "POST":
+        form = MessageForm(request.POST)
         if form.is_valid():
-            query = form.save(commit=False)
-            query.document = document
-            
-            # TODO: Add RAG system logic here
-            # Example: query.answer = call_rag_system(query.question, document.file.path)
-            query.answer = "This is a placeholder response."
-            query.save()
-            return JsonResponse({'question': query.question, 'answer': query.answer})
-    else:
-        form = QueryForm()
-    return render(request, 'rag_app/query.html', {'form': form, 'document': document})
+            # Save user message
+            user_message = form.save(commit=False)
+            user_message.conversation = conversation
+            user_message.sender = request.user
+            user_message.role = "user"  # Explicitly setting user role
+            user_message.save()
+
+            # Simulated LLM response
+            llm_response = f"Respuesta generada para: {user_message.text[:50]}..."  # Simulate LLM output
+
+            # Save LLM response
+            Message.objects.create(
+                conversation=conversation,
+                sender=request.user,  # Keeping sender for structure, but should be an assistant bot user
+                role="assistant",
+                text=llm_response
+            )
+
+            return redirect("conversation_detail", conversation_id=conversation.id)
+
+    return redirect("conversation_detail", conversation_id=conversation.id)
