@@ -190,10 +190,3 @@ This project is licensed under **MIT License**.
 📧 **Email:** your.email@example.com  
 🐙 **GitHub:** [yourusername](https://github.com/yourusername)  
 
----
-
-### ✅ Now, You Can Continue Configuration Using an LLM!
-This README provides a structured introduction so an **LLM (like ChatGPT, Claude, or Copilot)** can:
-- **Understand your app’s architecture.**
-- **Help configure missing components (Celery, FAISS, LLMs).**
-- **Generate additional code for features like authentication, API integration, and query processing.**
