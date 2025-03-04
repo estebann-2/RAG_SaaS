@@ -91,21 +91,6 @@ def upload_document(request):
 
     return JsonResponse({"success": False, "error": "No se proporcionó un archivo."})
 
-    #     # ✅ Create a system message to confirm the document upload
-    #     Message.objects.create(
-    #         conversation=conversation,
-    #         sender=request.user,  # Keeping sender as user for now
-    #         role="assistant",
-    #         text=f"📂 Documento '{document_name}' procesado y listo para consultas."
-    #     )
-
-    #     return JsonResponse({
-    #         "success": True,
-    #         "response": f"Documento '{document_name}' subido y procesado.",
-    #         "conversation_id": conversation.id
-    #     })
-
-    # return JsonResponse({"success": False, "error": "No se proporcionó un archivo."})
 
 
 @login_required
@@ -169,22 +154,6 @@ def send_message(request, conversation_id):
             user_message.role = "user"
             user_message.save()
 
-            # # ✅ Retrieve relevant chunks
-            # relevant_chunks = retrieve_relevant_chunks(user_message.text)
-            # context_text = "\n\n".join(chunk.content for chunk in relevant_chunks)
-            # prompt = f"Context:\n{context_text}\n\nUser Query: {user_message.text}"
-
-            # # ✅ Get LLM response
-            # llm_response = query_llm(prompt)
-
-            # # ✅ Save LLM response
-            # assistant_user, _ = User.objects.get_or_create(username="Assistant", defaults={"is_active": False})  # Create assistant if not exists
-            # Message.objects.create(
-            #     conversation=conversation,
-            #     sender=assistant_user,  # Assign to the assistant user
-            #     role="assistant",
-            #     text=llm_response
-            # )
 
             # Retrieve relevant chunks
             relevant_chunks = retrieve_relevant_chunks(user_message.text, conversation, top_k=3)

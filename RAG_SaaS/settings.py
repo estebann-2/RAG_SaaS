@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_swagger',  # Optional Swagger UI
+    'drf_yasg',  # For API schema generation
+    'rest_framework.documentation',
 ]
 
 MIDDLEWARE = [
@@ -149,6 +153,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rag_app',  # Add your app here
+    'rest_framework',
 ]
 
 # Static and Media files settings

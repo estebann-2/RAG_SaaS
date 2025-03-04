@@ -9262,3 +9262,1954 @@ User Query: Cuáles son los aspectos centrales
    - Justificación de la estructura de costos en función de los resultados esperados.
 
 Estos aspectos reflejan la capacidad del proveedor para ofrecer soluciones integrales en analítica, automatización y soporte, alineadas con los objetivos comerciales y adaptables a las necesidades del cliente.
+2025-03-03 20:10:28,034 - INFO - 📂 Procesando documento: CV (/Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/CV.pdf)
+2025-03-03 20:10:28,051 - INFO - 📖 Extracting text from PDF: /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/CV.pdf
+2025-03-03 20:10:28,129 - INFO - 📜 Documento leído, longitud: 7590 caracteres
+2025-03-03 20:10:28,130 - INFO - ✂️ Documento dividido en 1 chunks
+2025-03-03 20:10:29,720 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:10:31,288 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:10:32,503 - INFO - 🎯 Documento 'CV' procesado con éxito
+2025-03-03 20:10:48,588 - INFO - 📖 Recuperando chunks de: CV
+2025-03-03 20:10:50,163 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:10:50,506 - INFO - 📌 Selected Chunk ID: 5462 from Document: CV (Score: 0.2306)
+2025-03-03 20:10:50,587 - INFO - 📌 Selected Chunk ID: 5463 from Document: CV (Score: 0.2306)
+2025-03-03 20:10:50,589 - INFO - 🔍 Relevant Chunks Used:
+Chunk 5462 from CV: Esteban Caicedo Graciano
+ esteban5-c-g@hotmail.co...
+Chunk 5463 from CV: Esteban Caicedo Graciano
+ esteban5-c-g@hotmail.co...
+2025-03-03 20:10:50,589 - INFO - Sending query to LLM: Context:
+Document: CV
+Chunk 5462:
+Esteban Caicedo Graciano
+ esteban5-c-g@hotmail.com
+ +57 31 54 96 93 74
+° Perﬁl de LinkedIn
+Perfil
+Matemático con sólida experiencia en programación (Python, R, Matlab y SQL), análisis y procesamiento de
+datos, desarrollo de ETLs, Machine Learning y análisis estadístico (paramétrico y no paramétrico). He tra-
+bajado en la construcción y optimización de modelos predictivos, segmentación de clientes, y personalización
+de estrategias, utilizando técnicas avanzadas de aprendizaje automático y Google Cloud Platform (GCP) para
+asegurar la escalabilidad y eﬁciencia de las soluciones. Mi enfoque está en la aplicación de algoritmos y métodos
+numéricos para resolver problemas complejos y mejorar la toma de decisiones. Me caracterizo por ser autodi-
+dacta, orientado al detalle y altamente responsable, con capacidad para adaptarme rápidamente a nuevos retos
+y entornos tecnológicos.
+Educación
+Enero 2024 - Actual
+Universidad de los Andes
+Maestría en Inteligencia Artiﬁcial
+Cursos principales: Machine Learning, Deep Learning, Procesamiento de lenguaje
+natural, Reinforcement Learning, Visión computacional, Representación del conoci-
+miento y web semántica, Sistemas embebidos y Teoría de control.
+2017 - Mayo 2022
+Pontificia Universidad Javeriana
+Pregrado en Matemáticas (Insignia)
+Énfasis en Estadística y Programación (Python, R y Matlab)
+Cursos principales: Aprendizaje estadístico y Machine Learning, Microeconomía,
+Matemática computacional, Álgebra lineal avanzada, Álgebra abstracta, Análisis Real
+y Complejo, Topología, Teoría de números, Estadística y probabilidad, Ecuaciones
+Diferenciales, Probabilidad y procesos estocásticos, Análisis Numérico, Estadística no
+paramétrica.
+Mayo - Sept. 2021
+Correlation One
+Data Science For All (DS4A)
+Graduado con honores. (Insignia)
+Programa de 13 semanas sobre Análisis de Datos, Arquitectura de Datos, Machine Learning e Inteligencia
+Artiﬁcial con Python, SQL y AWS, impartido por profesores de las mejores universidades del mundo
+como Harvard, Princeton, Columbia y MIT.
+Proyecto ﬁnal: Estimación con métodos de Machine Learning de las ganancias tributarias y demanda
+de estampillas del mercado de licores para la gobernación de Antioquia.
+Experiencia profesional
+Enero. 2024 - Actual
+VML
+Cientíﬁco de datos
+Construcción, despliegue y optimización de modelos de Machine Learning y Deep Learning con enfo-
+ques avanzados en predicción, segmentación de clientes, clasiﬁcación, y personalización de estrategias en
+el sector retail. Desarrollo y puesta en producción de modelos utilizando plataformas en la nube como
+Google Cloud Platform (GCP), asegurando la escalabilidad y la integración eﬁciente con aplicaciones em-
+presariales. Experiencia sólida en desarrollo de aplicaciones de procesamiento de lenguaje natural (NLP)
+y modelos de lenguaje (LLM) aplicados a agentes conversacionales, chatbots y análisis de sentimiento,
+mejorando la interacción y la experiencia del cliente a través de soluciones automatizadas e inteligentes.
+Desarrollo, gestión y optimización de procesos ETL para garantizar la calidad y la integridad de los
+datos utilizados en los modelos, empleando herramientas como Python y SQL para automatización y
+mejora de los ﬂujos de datos. Amplio dominio en construcción de tableros de control y seguimiento con
+Power BI, Django y Shiny, permitiendo el monitoreo y análisis de los KPIs clave de negocio.
+Feb. 2023 - Dic. 2023
+VMLY&R Commerce
+Cientíﬁco de datos
+Desarrollo y optimización de modelos de machine learning enfocados en predicción, segmentación de
+clientes y clasiﬁcación para el sector retail y publicidad. Implementación de soluciones personalizadas
+que mejoran la toma de decisiones y aumentan el impacto comercial, utilizando Python, R y plataformas
+como Knime. Gestión de procesos ETL para asegurar la calidad de los datos y automatización con Python
+y SQL para manejar grandes volúmenes de información. Creación de dashboards interactivos con Power
+BI, Django y Shiny, integrando análisis en tiempo real para facilitar decisiones basadas en datos.
+Sept. - Dic. 2022
+Paris School of Economics
+Asistente de investigación
+Procesamiento y análisis de series de tiempo de países de la zona Euro, Japón y Estados Unidos para la
+construcción de modelos de Machine Learning enfocados al riesgo soberano para el proyecto: Forecasting
+Sovereign Risk in the Euro Area via Machine Learning.
+Abr. 2021 - Jun. 2022
+Pontificia Universidad Javeriana
+Asistente de investigación
+Procesamiento y análisis de bases de datos, minería de datos, modelación estadística y aplicaciones de
+Machine Learning en Python, R y SQL para el proyecto: Modelling of social contact patterns in Bogotá,
+Colombia during the Covid-19 pandemic.
+2021 - Mayo 2022
+Departamento de Matemáticas - Pontificia Universidad Javeriana
+Monitor Académico
+Resolución de dudas de los estudiantes en Álgebra Lineal, Cálculo Diferencial, Cálculo Integral, Cálculo
+Vectorial, Probabilidad, Estadística Inferencial, Ecuaciones Diferenciales, Matemáticas Discretas.
+Certificaciones
+Enero. 2025
+DeepLearning.AI
+Natural Language Processing Specialization (Certiﬁcado)
+Completa formación en el procesamiento del lenguaje natural (NLP) con técnicas de aprendizaje au-
+tomático clásico y aprendizaje profundo. Incluye habilidades prácticas para diseñar aplicaciones que
+realizan análisis de sentimiento, traducción automática, generación de resúmenes y sistemas de pregun-
+tas y respuestas. Se abarcan modelos de clasiﬁcación y espacios vectoriales, modelos probabilísticos,
+modelos secuenciales y modelos basados en atención, incluyendo transformers. Además, se desarrollaron
+habilidades prácticas en el uso de frameworks como TensorFlow y PyTorch para implementar y entre-
+nar modelos avanzados de NLP. Curso impartido por Younes Bensouda Mourri (Stanford University) y
+Łukasz Kaiser (Google). Este programa proporcionó tanto conocimientos teóricos como prácticos para
+construir sistemas de NLP que lideran la transformación hacia un futuro impulsado por la inteligencia
+artiﬁcial.
+Oct. 2024
+Stanford University & DeepLearning.AI
+Machine Learning specialization (Certiﬁcado)
+Completa formación en los fundamentos de machine learning, incluyendo técnicas de aprendizaje super-
+visado (regresión lineal, logística, redes neuronales, árboles de decisión) y no supervisado (clustering,
+reducción de dimensionalidad, detección de anomalías). Desarrollo de habilidades prácticas en el uso de
+librerías de Python como NumPy, scikit-learn y TensorFlow para construir y entrenar modelos. Aplica-
+ción de mejores prácticas en el desarrollo de IA, optimización de modelos y construcción de sistemas de
+recomendación. Curso impartido por Andrew Ng, referente mundial en inteligencia artiﬁcial.
+Nov. 2022
+IBM
+Django Application Development with SQL and Databases (Certiﬁcado) (Insignia)
+Introducción a algunos conceptos fundamentales de las bases de datos. Aprendizaje de los fundamentos
+de SQL y de las bases de datos en la nube. Cómo el mapeo objeto-relacional (ORM) le permite utilizar
+lenguajes de programación orientada a objetos (OOP) para trabajar con bases de datos. Por último, se
+aprenden habilidades full-stack Django mediante la creación de una aplicación web Django para procesar
+y presentar datos, además, se aprende como desplegar la aplicación Django en la nube.
+Habilidades profesionales
+Idiomas
+Habilidades tecnológicas
+- Español (Nativo)
+Programación, Procesamiento de datos, Estadística, Machine Learning y Visualiza-
+ción:
+- Inglés (B2)
+- (Avanzado) R, Python, Matlab, Power BI.
+- (Intermediate) SQL, Knime, Excel.
+- Francés (B1)
+Otros softwares: Git, LATEX
+
+Document: CV
+Chunk 5463:
+Esteban Caicedo Graciano
+ esteban5-c-g@hotmail.com
+ +57 31 54 96 93 74
+° Perﬁl de LinkedIn
+Perfil
+Matemático con sólida experiencia en programación (Python, R, Matlab y SQL), análisis y procesamiento de
+datos, desarrollo de ETLs, Machine Learning y análisis estadístico (paramétrico y no paramétrico). He tra-
+bajado en la construcción y optimización de modelos predictivos, segmentación de clientes, y personalización
+de estrategias, utilizando técnicas avanzadas de aprendizaje automático y Google Cloud Platform (GCP) para
+asegurar la escalabilidad y eﬁciencia de las soluciones. Mi enfoque está en la aplicación de algoritmos y métodos
+numéricos para resolver problemas complejos y mejorar la toma de decisiones. Me caracterizo por ser autodi-
+dacta, orientado al detalle y altamente responsable, con capacidad para adaptarme rápidamente a nuevos retos
+y entornos tecnológicos.
+Educación
+Enero 2024 - Actual
+Universidad de los Andes
+Maestría en Inteligencia Artiﬁcial
+Cursos principales: Machine Learning, Deep Learning, Procesamiento de lenguaje
+natural, Reinforcement Learning, Visión computacional, Representación del conoci-
+miento y web semántica, Sistemas embebidos y Teoría de control.
+2017 - Mayo 2022
+Pontificia Universidad Javeriana
+Pregrado en Matemáticas (Insignia)
+Énfasis en Estadística y Programación (Python, R y Matlab)
+Cursos principales: Aprendizaje estadístico y Machine Learning, Microeconomía,
+Matemática computacional, Álgebra lineal avanzada, Álgebra abstracta, Análisis Real
+y Complejo, Topología, Teoría de números, Estadística y probabilidad, Ecuaciones
+Diferenciales, Probabilidad y procesos estocásticos, Análisis Numérico, Estadística no
+paramétrica.
+Mayo - Sept. 2021
+Correlation One
+Data Science For All (DS4A)
+Graduado con honores. (Insignia)
+Programa de 13 semanas sobre Análisis de Datos, Arquitectura de Datos, Machine Learning e Inteligencia
+Artiﬁcial con Python, SQL y AWS, impartido por profesores de las mejores universidades del mundo
+como Harvard, Princeton, Columbia y MIT.
+Proyecto ﬁnal: Estimación con métodos de Machine Learning de las ganancias tributarias y demanda
+de estampillas del mercado de licores para la gobernación de Antioquia.
+Experiencia profesional
+Enero. 2024 - Actual
+VML
+Cientíﬁco de datos
+Construcción, despliegue y optimización de modelos de Machine Learning y Deep Learning con enfo-
+ques avanzados en predicción, segmentación de clientes, clasiﬁcación, y personalización de estrategias en
+el sector retail. Desarrollo y puesta en producción de modelos utilizando plataformas en la nube como
+Google Cloud Platform (GCP), asegurando la escalabilidad y la integración eﬁciente con aplicaciones em-
+presariales. Experiencia sólida en desarrollo de aplicaciones de procesamiento de lenguaje natural (NLP)
+y modelos de lenguaje (LLM) aplicados a agentes conversacionales, chatbots y análisis de sentimiento,
+mejorando la interacción y la experiencia del cliente a través de soluciones automatizadas e inteligentes.
+Desarrollo, gestión y optimización de procesos ETL para garantizar la calidad y la integridad de los
+datos utilizados en los modelos, empleando herramientas como Python y SQL para automatización y
+mejora de los ﬂujos de datos. Amplio dominio en construcción de tableros de control y seguimiento con
+Power BI, Django y Shiny, permitiendo el monitoreo y análisis de los KPIs clave de negocio.
+Feb. 2023 - Dic. 2023
+VMLY&R Commerce
+Cientíﬁco de datos
+Desarrollo y optimización de modelos de machine learning enfocados en predicción, segmentación de
+clientes y clasiﬁcación para el sector retail y publicidad. Implementación de soluciones personalizadas
+que mejoran la toma de decisiones y aumentan el impacto comercial, utilizando Python, R y plataformas
+como Knime. Gestión de procesos ETL para asegurar la calidad de los datos y automatización con Python
+y SQL para manejar grandes volúmenes de información. Creación de dashboards interactivos con Power
+BI, Django y Shiny, integrando análisis en tiempo real para facilitar decisiones basadas en datos.
+Sept. - Dic. 2022
+Paris School of Economics
+Asistente de investigación
+Procesamiento y análisis de series de tiempo de países de la zona Euro, Japón y Estados Unidos para la
+construcción de modelos de Machine Learning enfocados al riesgo soberano para el proyecto: Forecasting
+Sovereign Risk in the Euro Area via Machine Learning.
+Abr. 2021 - Jun. 2022
+Pontificia Universidad Javeriana
+Asistente de investigación
+Procesamiento y análisis de bases de datos, minería de datos, modelación estadística y aplicaciones de
+Machine Learning en Python, R y SQL para el proyecto: Modelling of social contact patterns in Bogotá,
+Colombia during the Covid-19 pandemic.
+2021 - Mayo 2022
+Departamento de Matemáticas - Pontificia Universidad Javeriana
+Monitor Académico
+Resolución de dudas de los estudiantes en Álgebra Lineal, Cálculo Diferencial, Cálculo Integral, Cálculo
+Vectorial, Probabilidad, Estadística Inferencial, Ecuaciones Diferenciales, Matemáticas Discretas.
+Certificaciones
+Enero. 2025
+DeepLearning.AI
+Natural Language Processing Specialization (Certiﬁcado)
+Completa formación en el procesamiento del lenguaje natural (NLP) con técnicas de aprendizaje au-
+tomático clásico y aprendizaje profundo. Incluye habilidades prácticas para diseñar aplicaciones que
+realizan análisis de sentimiento, traducción automática, generación de resúmenes y sistemas de pregun-
+tas y respuestas. Se abarcan modelos de clasiﬁcación y espacios vectoriales, modelos probabilísticos,
+modelos secuenciales y modelos basados en atención, incluyendo transformers. Además, se desarrollaron
+habilidades prácticas en el uso de frameworks como TensorFlow y PyTorch para implementar y entre-
+nar modelos avanzados de NLP. Curso impartido por Younes Bensouda Mourri (Stanford University) y
+Łukasz Kaiser (Google). Este programa proporcionó tanto conocimientos teóricos como prácticos para
+construir sistemas de NLP que lideran la transformación hacia un futuro impulsado por la inteligencia
+artiﬁcial.
+Oct. 2024
+Stanford University & DeepLearning.AI
+Machine Learning specialization (Certiﬁcado)
+Completa formación en los fundamentos de machine learning, incluyendo técnicas de aprendizaje super-
+visado (regresión lineal, logística, redes neuronales, árboles de decisión) y no supervisado (clustering,
+reducción de dimensionalidad, detección de anomalías). Desarrollo de habilidades prácticas en el uso de
+librerías de Python como NumPy, scikit-learn y TensorFlow para construir y entrenar modelos. Aplica-
+ción de mejores prácticas en el desarrollo de IA, optimización de modelos y construcción de sistemas de
+recomendación. Curso impartido por Andrew Ng, referente mundial en inteligencia artiﬁcial.
+Nov. 2022
+IBM
+Django Application Development with SQL and Databases (Certiﬁcado) (Insignia)
+Introducción a algunos conceptos fundamentales de las bases de datos. Aprendizaje de los fundamentos
+de SQL y de las bases de datos en la nube. Cómo el mapeo objeto-relacional (ORM) le permite utilizar
+lenguajes de programación orientada a objetos (OOP) para trabajar con bases de datos. Por último, se
+aprenden habilidades full-stack Django mediante la creación de una aplicación web Django para procesar
+y presentar datos, además, se aprende como desplegar la aplicación Django en la nube.
+Habilidades profesionales
+Idiomas
+Habilidades tecnológicas
+- Español (Nativo)
+Programación, Procesamiento de datos, Estadística, Machine Learning y Visualiza-
+ción:
+- Inglés (B2)
+- (Avanzado) R, Python, Matlab, Power BI.
+- (Intermediate) SQL, Knime, Excel.
+- Francés (B1)
+Otros softwares: Git, LATEX
+
+User Query: Resume el documento
+2025-03-03 20:10:59,491 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 20:10:59,539 - INFO - LLM response: **Resumen del CV de Esteban Caicedo Graciano**
+
+**Perfil:**
+Matemático con experiencia en programación (Python, R, Matlab, SQL), análisis de datos, desarrollo de ETLs, Machine Learning y análisis estadístico. Especializado en construcción y optimización de modelos predictivos, segmentación de clientes y personalización de estrategias utilizando Google Cloud Platform (GCP). Destaca en la aplicación de algoritmos y métodos numéricos para resolver problemas complejos.
+
+**Educación:**
+- **Universidad de los Andes** (Enero 2024 - Actual): Maestría en Inteligencia Artificial, con cursos en Machine Learning, Deep Learning y Procesamiento de Lenguaje Natural.
+- **Pontificia Universidad Javeriana** (2017 - Mayo 2022): Pregrado en Matemáticas con énfasis en Estadística y Programación.
+- **Correlation One** (Mayo - Sept. 2021): Graduado con honores en el programa Data Science For All, enfocado en análisis de datos y Machine Learning.
+
+**Experiencia Profesional:**
+- **VML** (Enero 2024 - Actual): Científico de datos, enfocado en modelos de Machine Learning y desarrollo de soluciones en el sector retail.
+- **VMLY&R Commerce** (Feb. 2023 - Dic. 2023): Desarrollo y optimización de modelos de machine learning y gestión de procesos ETL.
+- **Paris School of Economics** (Sept. - Dic. 2022): Asistente de investigación en análisis de series de tiempo.
+- **Pontificia Universidad Javeriana** (Abr. 2021 - Jun. 2022): Asistente de investigación en modelación estadística durante la pandemia de Covid-19.
+- **Departamento de Matemáticas, Pontificia Universidad Javeriana** (2021 - Mayo 2022): Monitor Académico.
+
+**Certificaciones:**
+- **DeepLearning.AI**: Especialización en Procesamiento de Lenguaje Natural (Enero 2025).
+- **Stanford University & DeepLearning.AI**: Especialización en Machine Learning (Oct. 2024).
+- **IBM**: Desarrollo de Aplicaciones Django con SQL y Bases de Datos (Nov. 2022).
+
+**Habilidades:**
+- **Idiomas**: Español (nativo), inglés (B2), francés (B1).
+- **Tecnologías**: Avanzado en R, Python, Matlab, Power BI; intermedio en SQL, Knime, Excel. Conocimientos en Git y LaTeX.
+
+Esteban se caracteriza por su autodidactismo, atención al detalle y responsabilidad, con capacidad para adaptarse a nuevos retos y entornos tecnológicos.
+2025-03-03 20:11:25,016 - INFO - 📂 Procesando documento: Honda_Data_Warehouse (/Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/Honda_Data_Warehouse.pdf)
+2025-03-03 20:11:25,017 - INFO - 📖 Extracting text from PDF: /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/Honda_Data_Warehouse.pdf
+2025-03-03 20:11:25,071 - INFO - 📜 Documento leído, longitud: 24102 caracteres
+2025-03-03 20:11:25,076 - INFO - ✂️ Documento dividido en 3 chunks
+2025-03-03 20:11:25,813 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:11:26,906 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:11:26,988 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:11:26,991 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:11:28,253 - INFO - 🎯 Documento 'Honda_Data_Warehouse' procesado con éxito
+2025-03-03 20:11:40,051 - INFO - 📖 Recuperando chunks de: Honda_Data_Warehouse
+2025-03-03 20:11:41,227 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-03 20:11:41,816 - INFO - 📌 Selected Chunk ID: 5469 from Document: Honda_Data_Warehouse (Score: 0.4964)
+2025-03-03 20:11:41,897 - INFO - 📌 Selected Chunk ID: 5464 from Document: Honda_Data_Warehouse (Score: 0.4963)
+2025-03-03 20:11:41,977 - INFO - 📌 Selected Chunk ID: 5465 from Document: Honda_Data_Warehouse (Score: 0.4756)
+2025-03-03 20:11:41,978 - INFO - 🔍 Relevant Chunks Used:
+Chunk 5469 from Honda_Data_Warehouse: Honda Data Warehouse
+VML Data Science & Engineerin...
+Chunk 5464 from Honda_Data_Warehouse: Honda Data Warehouse
+VML Data Science & Engineerin...
+Chunk 5465 from Honda_Data_Warehouse: Impression Due to Rank,
+Lost Impression Due to
+Bud...
+2025-03-03 20:11:41,979 - INFO - Sending query to LLM: Context:
+Document: Honda_Data_Warehouse
+Chunk 5469:
+Honda Data Warehouse
+VML Data Science & Engineering Team
+Carlos Mart´ınez*
+David Zapata**
+Nicol´as Tibat´a***
+Esteban Caicedo****
+23 de diciembre de 2024
+*carlos.martinez@vml.com
+**david.zapata@vml.com
+***nicolas.tibata@vml.com
+****esteban.caicedo@vml.com
+1
+´Indice
+1. Introducci´on
+3
+2. Definici´on de M´etricas y Dimensiones Clave
+5
+2.1. M´etricas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+2.2. Dimensiones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+3. Proceso ETL (Extract, Transform, Load)
+8
+3.1. Etapas del Proceso ETL . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+3.1.1.
+Extracci´on (Extract) . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+3.1.2.
+Transformaci´on (Transform) . . . . . . . . . . . . . . . . . . . . . .
+8
+3.1.3.
+Carga (Load) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+3.2. Automatizaci´on del Proceso ETL . . . . . . . . . . . . . . . . . . . . . . .
+10
+3.3. Beneficios del Proceso ETL
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+10
+4. Migraci´on Dashboard Looker a Power BI
+12
+4.1. Objetivos de la Migraci´on
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+4.2. Etapas de la Migraci´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+4.2.1.
+An´alisis y Documentaci´on del Dashboard Actual . . . . . . . . . . .
+13
+4.2.2.
+Dise˜no del Modelo de Datos en Power BI . . . . . . . . . . . . . . .
+13
+4.2.3.
+Extracci´on y Transformaci´on de Nuevas Fuentes . . . . . . . . . . .
+13
+4.2.4.
+Construcci´on del Dashboard en Power BI . . . . . . . . . . . . . . .
+13
+4.2.5.
+Validaci´on y Pruebas . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+4.2.6.
+Implementaci´on y cierre
+. . . . . . . . . . . . . . . . . . . . . . . .
+14
+4.3. Beneficios de la Migraci´on a Power BI . . . . . . . . . . . . . . . . . . . . .
+14
+2
+1.
+Introducci´on
+En la b´usqueda por optimizar la toma de decisiones y mejorar la eficiencia operativa, se
+ha decidido implementar un sistema centralizado de an´alisis y gesti´on de datos mediante
+la construcci´on de un Data Warehouse en Google Cloud Platform (GCP). Este proyecto
+representa un paso estrat´egico hacia la modernizaci´on de las capacidades anal´ıticas de
+Honda en conjunto de VML, permitiendo no solo un an´alisis m´as preciso de sus operaciones
+de marketing, sino tambi´en una integraci´on m´as eficiente de diversas fuentes de datos
+digitales.
+La necesidad de un Data Warehouse surge de los desaf´ıos actuales que enfrenta Honda
+al manejar vol´umenes crecientes de datos provenientes de m´ultiples plataformas. Cada una
+de estas plataformas, como Google Analytics, Meta Ads, Salesforce Marketing Cloud,
+Google Search Console, YouTube, TikTok, y otras, ofrece informaci´on cr´ıtica para la
+gesti´on del negocio, pero su naturaleza fragmentada limita la capacidad de obtener insights
+integrados y tomar decisiones basadas en datos en tiempo real.
+El objetivo principal de este sistema es consolidar y organizar datos heterog´eneos en
+un ´unico repositorio centralizado que permita realizar an´alisis avanzados y visualizaciones
+interactivas. Con esta soluci´on, Honda podr´a:
+Monitorear y analizar el desempe˜no de sus campa˜nas de marketing digi-
+tal: Las m´etricas clave, como impresiones, clics, tasas de conversi´on y retorno de la
+inversi´on, ser´an accesibles en un solo lugar.
+Evaluar el impacto y engagement de sus actividades en redes sociales:
+Datos de plataformas como Facebook, Instagram, TikTok y YouTube se integrar´an
+para analizar c´omo interact´uan los usuarios con los contenidos de la marca.
+Optimizar estrategias comerciales: A trav´es de la integraci´on de datos de ventas
+digitales y prospectos, se buscar´a mejorar la eficiencia en la conversi´on de leads y
+en la gesti´on de clientes potenciales.
+El Data Warehouse en GCP se construir´a utilizando herramientas y servicios l´ıderes
+en la industria, como BigQuery, Python y SQL, que permitir´an implementar procesos de
+extracci´on, transformaci´on y carga (ETL) automatizados. Adem´as, se adoptar´an pr´acticas
+modernas de gesti´on de datos, como el dise˜no de tablas particionadas, para garantizar que
+el sistema sea escalable y eficiente, incluso con el aumento futuro en el volumen de datos.
+Este documento se centra en la primera fase del proyecto, que incluye:
+1. Definici´on de m´etricas y dimensiones clave: Identificaci´on de los indicadores
+de desempe˜no m´as relevantes para cada fuente de datos.
+2. Dise˜no del proceso ETL: Descripci´on de las etapas de extracci´on, transformaci´on
+y carga de datos, asegurando su calidad, consistencia e integridad.
+3. Estrategias de automatizaci´on: Propuesta de herramientas y tecnolog´ıas para
+minimizar el esfuerzo manual y garantizar la sincronizaci´on de datos en tiempo real.
+El Data Warehouse no solo ser´a un repositorio de datos; se convertir´a en un pilar
+estrat´egico que permitir´a a Honda aprovechar al m´aximo el poder del an´alisis avanzado
+para mantenerse competitiva en un entorno cada vez m´as digitalizado. Este sistema no
+3
+solo facilitar´a una toma de decisiones m´as ´agil y basada en datos, sino que tambi´en for-
+talecer´a la capacidad de Honda para adaptarse r´apidamente a las tendencias del mercado
+y satisfacer las demandas cambiantes de sus clientes.
+El Data Warehouse ser´a implementado en la cuenta de Google Cloud Platform asociada
+al correo hondamotoscolombia@gmail.com. Para garantizar una gesti´on adecuada de
+los costos, se configurar´a una cuenta de facturaci´on (Billing Account) vinculada a VML, de
+manera que todos los cargos generados por el uso de los servicios en la nube sean dirigidos
+directamente a VML. Esta configuraci´on asegura una administraci´on centralizada de los
+recursos financieros y facilita el monitoreo de los gastos asociados al proyecto.
+Todas las integraciones y los pipelines de datos (ETL) necesarios para la consolidaci´on
+y transformaci´on de la informaci´on se desarrollar´an y operar´an desde esta cuenta de
+Google Cloud Platform. Esto incluye el uso de servicios como BigQuery, Cloud Storage y
+Cloud Run, garantizando que el flujo de datos sea centralizado, seguro y eficiente. Adem´as,
+se realizar´an revisiones peri´odicas para optimizar el rendimiento y los costos asociados a
+estas operaciones.
+En las siguientes secciones, se detalla el marco conceptual del proyecto, los requerimien-
+tos t´ecnicos y operativos, as´ı como las metodolog´ıas propuestas para su implementaci´on.
+4
+2.
+Definici´on de M´etricas y Dimensiones Clave
+En esta secci´on se describen las m´etricas y dimensiones clave que ser´an integradas
+al Data Warehouse. Estas m´etricas y dimensiones han sido categorizadas por fuente de
+datos y est´an dise˜nadas para monitorear el desempe˜no de las campa˜nas de marketing, el
+engagement en redes sociales, la eficiencia operativa y la interacci´on del cliente.
+Por otro lado, inicialmente no se incluir´an las fuentes Clarity y Semrush, ya que
+su incorporaci´on depender´a de la definici´on espec´ıfica de la informaci´on que se desea
+extraer de estas plataformas. La inclusi´on de esta informaci´on ser´a evaluada y definida en
+pr´oximas reuniones.
+2.1.
+M´etricas
+Las m´etricas son indicadores cuantitativos utilizados para evaluar el desempe˜no de
+campa˜nas, procesos y actividades. Cada fuente de datos contribuye con un conjunto de
+m´etricas espec´ıficas, detalladas en la siguiente tabla:
+Fuente de Datos
+M´etricas
+Descripci´on
+Google Analytics
+Sesiones,
+Average
+Ses-
+sion
+Duration,
+Bounce
+Rate, Engaged Sessions,
+Engagement Rate, Acti-
+ve Users, Total Users,
+New Users, Scroll
+M´etricas relacionadas con el comporta-
+miento del usuario en el sitio web.
+Google Search Con-
+sole
+Clicks, Impresiones, Ave-
+rage Position, Keywords
+Desempe˜no org´anico en motores de
+b´usqueda.
+Meta Ads
+Impresiones, CPM, CPL
+Proyectado, CPC, CTR,
+Leads Generados, Video
+Views, Link Clicks
+M´etricas relacionadas con campa˜nas
+publicitarias en Facebook e Instagram.
+Google Ads
+Impresiones, CPM, CPL
+Real, CPC, CTR, Lost
+Impression Due to Rank,
+Lost Impression Due to
+Budget, Clicks
+Rendimiento y eficiencia de campa˜nas
+en Google Ads.
+Facebook
+Seguidores,
+Reach,
+Li-
+kes, Comments, Shares,
+Reactions, Link Clicks,
+Video Views
+Engagement y alcance de publicaciones
+org´anicas en Facebook.
+Instagram
+Seguidores,
+Reach,
+Li-
+kes, Comments, Shares,
+Reactions, Link Clicks,
+Video Views
+Engagement y alcance de publicaciones
+org´anicas en Instagram.
+5
+Fuente de Datos
+M´etricas
+Descripci´on
+Youtube
+Video views, Comments
+#, Likes, Shares, Card
+impressions,
+Average
+view
+duration
+(sec),
+Average
+view
+duration
+percentage
+Engagement y alcance de publicaciones
+org´anicas en Youtube.
+TikTok
+Likes, Comments, Saves,
+Views, Interactions.
+Engagement y alcance de publicaciones
+org´anicas en TikTok.
+Salesforce
+Marke-
+ting Cloud
+Total
+de
+Env´ıos,
+To-
+tal de Entregados, Total
+de Aperturas, Total de
+Clicks, Bounce Rate, %
+de Suscripci´on
+M´etricas relacionadas con campa˜nas de
+email marketing.
+Prospectos
+Valor Oferta Motos Ajus-
+tada, Fecha de Cierre
+Valor ajustado de las ofertas realizadas
+a los prospectos y la fecha en que se
+cerr´o una oferta de venta.
+Ventas
+Valor Oferta Motos Ajus-
+tada, Ventas por Periodo
+Valor ajustado de las ofertas y n´ume-
+ro de ventas realizadas en un periodo
+espec´ıfico.
+2.2.
+Dimensiones
+Las dimensiones son atributos cualitativos que permiten segmentar y categorizar las
+m´etricas para un an´alisis m´as detallado. Estas dimensiones son clave para comprender
+los datos en su contexto y generar insights relevantes. A continuaci´on, se presentan las
+principales dimensiones organizadas por fuente de datos:
+Fuente de Datos
+Dimensiones
+Descripci´on
+Google Analytics
+Canal,
+Evento,
+Page
+Path
+(URL),
+Fuente,
+Medio
+Dimensiones relacionadas con la fuen-
+te y comportamiento del usuario en el
+sitio web.
+Google Search Con-
+sole
+Canal, Palabras Clave,
+B´usquedas
+en
+las
+que
+aparecemos
+Informaci´on de b´usqueda org´anica y
+t´erminos relevantes.
+Meta Ads
+Campa˜na,
+Grupo
+de
+Anuncios, Objetivo
+
+Document: Honda_Data_Warehouse
+Chunk 5464:
+Honda Data Warehouse
+VML Data Science & Engineering Team
+Carlos Mart´ınez*
+David Zapata**
+Nicol´as Tibat´a***
+Esteban Caicedo****
+23 de diciembre de 2024
+*carlos.martinez@vml.com
+**david.zapata@vml.com
+***nicolas.tibata@vml.com
+****esteban.caicedo@vml.com
+1
+´Indice
+1. Introducci´on
+3
+2. Definici´on de M´etricas y Dimensiones Clave
+5
+2.1. M´etricas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+2.2. Dimensiones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+3. Proceso ETL (Extract, Transform, Load)
+8
+3.1. Etapas del Proceso ETL . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+3.1.1.
+Extracci´on (Extract) . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+3.1.2.
+Transformaci´on (Transform) . . . . . . . . . . . . . . . . . . . . . .
+8
+3.1.3.
+Carga (Load) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+3.2. Automatizaci´on del Proceso ETL . . . . . . . . . . . . . . . . . . . . . . .
+10
+3.3. Beneficios del Proceso ETL
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+10
+4. Migraci´on Dashboard Looker a Power BI
+12
+4.1. Objetivos de la Migraci´on
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+4.2. Etapas de la Migraci´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+4.2.1.
+An´alisis y Documentaci´on del Dashboard Actual . . . . . . . . . . .
+13
+4.2.2.
+Dise˜no del Modelo de Datos en Power BI . . . . . . . . . . . . . . .
+13
+4.2.3.
+Extracci´on y Transformaci´on de Nuevas Fuentes . . . . . . . . . . .
+13
+4.2.4.
+Construcci´on del Dashboard en Power BI . . . . . . . . . . . . . . .
+13
+4.2.5.
+Validaci´on y Pruebas . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+4.2.6.
+Implementaci´on y cierre
+. . . . . . . . . . . . . . . . . . . . . . . .
+14
+4.3. Beneficios de la Migraci´on a Power BI . . . . . . . . . . . . . . . . . . . . .
+14
+2
+1.
+Introducci´on
+En la b´usqueda por optimizar la toma de decisiones y mejorar la eficiencia operativa, se
+ha decidido implementar un sistema centralizado de an´alisis y gesti´on de datos mediante
+la construcci´on de un Data Warehouse en Google Cloud Platform (GCP). Este proyecto
+representa un paso estrat´egico hacia la modernizaci´on de las capacidades anal´ıticas de
+Honda en conjunto de VML, permitiendo no solo un an´alisis m´as preciso de sus operaciones
+de marketing, sino tambi´en una integraci´on m´as eficiente de diversas fuentes de datos
+digitales.
+La necesidad de un Data Warehouse surge de los desaf´ıos actuales que enfrenta Honda
+al manejar vol´umenes crecientes de datos provenientes de m´ultiples plataformas. Cada una
+de estas plataformas, como Google Analytics, Meta Ads, Salesforce Marketing Cloud,
+Google Search Console, YouTube, TikTok, y otras, ofrece informaci´on cr´ıtica para la
+gesti´on del negocio, pero su naturaleza fragmentada limita la capacidad de obtener insights
+integrados y tomar decisiones basadas en datos en tiempo real.
+El objetivo principal de este sistema es consolidar y organizar datos heterog´eneos en
+un ´unico repositorio centralizado que permita realizar an´alisis avanzados y visualizaciones
+interactivas. Con esta soluci´on, Honda podr´a:
+Monitorear y analizar el desempe˜no de sus campa˜nas de marketing digi-
+tal: Las m´etricas clave, como impresiones, clics, tasas de conversi´on y retorno de la
+inversi´on, ser´an accesibles en un solo lugar.
+Evaluar el impacto y engagement de sus actividades en redes sociales:
+Datos de plataformas como Facebook, Instagram, TikTok y YouTube se integrar´an
+para analizar c´omo interact´uan los usuarios con los contenidos de la marca.
+Optimizar estrategias comerciales: A trav´es de la integraci´on de datos de ventas
+digitales y prospectos, se buscar´a mejorar la eficiencia en la conversi´on de leads y
+en la gesti´on de clientes potenciales.
+El Data Warehouse en GCP se construir´a utilizando herramientas y servicios l´ıderes
+en la industria, como BigQuery, Python y SQL, que permitir´an implementar procesos de
+extracci´on, transformaci´on y carga (ETL) automatizados. Adem´as, se adoptar´an pr´acticas
+modernas de gesti´on de datos, como el dise˜no de tablas particionadas, para garantizar que
+el sistema sea escalable y eficiente, incluso con el aumento futuro en el volumen de datos.
+Este documento se centra en la primera fase del proyecto, que incluye:
+1. Definici´on de m´etricas y dimensiones clave: Identificaci´on de los indicadores
+de desempe˜no m´as relevantes para cada fuente de datos.
+2. Dise˜no del proceso ETL: Descripci´on de las etapas de extracci´on, transformaci´on
+y carga de datos, asegurando su calidad, consistencia e integridad.
+3. Estrategias de automatizaci´on: Propuesta de herramientas y tecnolog´ıas para
+minimizar el esfuerzo manual y garantizar la sincronizaci´on de datos en tiempo real.
+El Data Warehouse no solo ser´a un repositorio de datos; se convertir´a en un pilar
+estrat´egico que permitir´a a Honda aprovechar al m´aximo el poder del an´alisis avanzado
+para mantenerse competitiva en un entorno cada vez m´as digitalizado. Este sistema no
+3
+solo facilitar´a una toma de decisiones m´as ´agil y basada en datos, sino que tambi´en for-
+talecer´a la capacidad de Honda para adaptarse r´apidamente a las tendencias del mercado
+y satisfacer las demandas cambiantes de sus clientes.
+El Data Warehouse ser´a implementado en la cuenta de Google Cloud Platform asociada
+al correo hondamotoscolombia@gmail.com. Para garantizar una gesti´on adecuada de
+los costos, se configurar´a una cuenta de facturaci´on (Billing Account) vinculada a VML, de
+manera que todos los cargos generados por el uso de los servicios en la nube sean dirigidos
+directamente a VML. Esta configuraci´on asegura una administraci´on centralizada de los
+recursos financieros y facilita el monitoreo de los gastos asociados al proyecto.
+Todas las integraciones y los pipelines de datos (ETL) necesarios para la consolidaci´on
+y transformaci´on de la informaci´on se desarrollar´an y operar´an desde esta cuenta de
+Google Cloud Platform. Esto incluye el uso de servicios como BigQuery, Cloud Storage y
+Cloud Run, garantizando que el flujo de datos sea centralizado, seguro y eficiente. Adem´as,
+se realizar´an revisiones peri´odicas para optimizar el rendimiento y los costos asociados a
+estas operaciones.
+En las siguientes secciones, se detalla el marco conceptual del proyecto, los requerimien-
+tos t´ecnicos y operativos, as´ı como las metodolog´ıas propuestas para su implementaci´on.
+4
+2.
+Definici´on de M´etricas y Dimensiones Clave
+En esta secci´on se describen las m´etricas y dimensiones clave que ser´an integradas
+al Data Warehouse. Estas m´etricas y dimensiones han sido categorizadas por fuente de
+datos y est´an dise˜nadas para monitorear el desempe˜no de las campa˜nas de marketing, el
+engagement en redes sociales, la eficiencia operativa y la interacci´on del cliente.
+Por otro lado, inicialmente no se incluir´an las fuentes Clarity y Semrush, ya que
+su incorporaci´on depender´a de la definici´on espec´ıfica de la informaci´on que se desea
+extraer de estas plataformas. La inclusi´on de esta informaci´on ser´a evaluada y definida en
+pr´oximas reuniones.
+2.1.
+M´etricas
+Las m´etricas son indicadores cuantitativos utilizados para evaluar el desempe˜no de
+campa˜nas, procesos y actividades. Cada fuente de datos contribuye con un conjunto de
+m´etricas espec´ıficas, detalladas en la siguiente tabla:
+Fuente de Datos
+M´etricas
+Descripci´on
+Google Analytics
+Sesiones,
+Average
+Ses-
+sion
+Duration,
+Bounce
+Rate, Engaged Sessions,
+Engagement Rate, Acti-
+ve Users, Total Users,
+New Users, Scroll
+M´etricas relacionadas con el comporta-
+miento del usuario en el sitio web.
+Google Search Con-
+sole
+Clicks, Impresiones, Ave-
+rage Position, Keywords
+Desempe˜no org´anico en motores de
+b´usqueda.
+Meta Ads
+Impresiones, CPM, CPL
+Proyectado, CPC, CTR,
+Leads Generados, Video
+Views, Link Clicks
+M´etricas relacionadas con campa˜nas
+publicitarias en Facebook e Instagram.
+Google Ads
+Impresiones, CPM, CPL
+Real, CPC, CTR, Lost
+Impression Due to Rank,
+Lost Impression Due to
+Budget, Clicks
+Rendimiento y eficiencia de campa˜nas
+en Google Ads.
+Facebook
+Seguidores,
+Reach,
+Li-
+kes, Comments, Shares,
+Reactions, Link Clicks,
+Video Views
+Engagement y alcance de publicaciones
+org´anicas en Facebook.
+Instagram
+Seguidores,
+Reach,
+Li-
+kes, Comments, Shares,
+Reactions, Link Clicks,
+Video Views
+Engagement y alcance de publicaciones
+org´anicas en Instagram.
+5
+Fuente de Datos
+M´etricas
+Descripci´on
+Youtube
+Video views, Comments
+#, Likes, Shares, Card
+impressions,
+Average
+view
+duration
+(sec),
+Average
+view
+duration
+percentage
+Engagement y alcance de publicaciones
+org´anicas en Youtube.
+TikTok
+Likes, Comments, Saves,
+Views, Interactions.
+Engagement y alcance de publicaciones
+org´anicas en TikTok.
+Salesforce
+Marke-
+ting Cloud
+Total
+de
+Env´ıos,
+To-
+tal de Entregados, Total
+de Aperturas, Total de
+Clicks, Bounce Rate, %
+de Suscripci´on
+M´etricas relacionadas con campa˜nas de
+email marketing.
+Prospectos
+Valor Oferta Motos Ajus-
+tada, Fecha de Cierre
+Valor ajustado de las ofertas realizadas
+a los prospectos y la fecha en que se
+cerr´o una oferta de venta.
+Ventas
+Valor Oferta Motos Ajus-
+tada, Ventas por Periodo
+Valor ajustado de las ofertas y n´ume-
+ro de ventas realizadas en un periodo
+espec´ıfico.
+2.2.
+Dimensiones
+Las dimensiones son atributos cualitativos que permiten segmentar y categorizar las
+m´etricas para un an´alisis m´as detallado. Estas dimensiones son clave para comprender
+los datos en su contexto y generar insights relevantes. A continuaci´on, se presentan las
+principales dimensiones organizadas por fuente de datos:
+Fuente de Datos
+Dimensiones
+Descripci´on
+Google Analytics
+Canal,
+Evento,
+Page
+Path
+(URL),
+Fuente,
+Medio
+Dimensiones relacionadas con la fuen-
+te y comportamiento del usuario en el
+sitio web.
+Google Search Con-
+sole
+Canal, Palabras Clave,
+B´usquedas
+en
+las
+que
+aparecemos
+Informaci´on de b´usqueda org´anica y
+t´erminos relevantes.
+Meta Ads
+Campa˜na,
+Grupo
+de
+Anuncios, Objetivo
+
+Document: Honda_Data_Warehouse
+Chunk 5465:
+Impression Due to Rank,
+Lost Impression Due to
+Budget, Clicks
+Rendimiento y eficiencia de campa˜nas
+en Google Ads.
+Facebook
+Seguidores,
+Reach,
+Li-
+kes, Comments, Shares,
+Reactions, Link Clicks,
+Video Views
+Engagement y alcance de publicaciones
+org´anicas en Facebook.
+Instagram
+Seguidores,
+Reach,
+Li-
+kes, Comments, Shares,
+Reactions, Link Clicks,
+Video Views
+Engagement y alcance de publicaciones
+org´anicas en Instagram.
+5
+Fuente de Datos
+M´etricas
+Descripci´on
+Youtube
+Video views, Comments
+#, Likes, Shares, Card
+impressions,
+Average
+view
+duration
+(sec),
+Average
+view
+duration
+percentage
+Engagement y alcance de publicaciones
+org´anicas en Youtube.
+TikTok
+Likes, Comments, Saves,
+Views, Interactions.
+Engagement y alcance de publicaciones
+org´anicas en TikTok.
+Salesforce
+Marke-
+ting Cloud
+Total
+de
+Env´ıos,
+To-
+tal de Entregados, Total
+de Aperturas, Total de
+Clicks, Bounce Rate, %
+de Suscripci´on
+M´etricas relacionadas con campa˜nas de
+email marketing.
+Prospectos
+Valor Oferta Motos Ajus-
+tada, Fecha de Cierre
+Valor ajustado de las ofertas realizadas
+a los prospectos y la fecha en que se
+cerr´o una oferta de venta.
+Ventas
+Valor Oferta Motos Ajus-
+tada, Ventas por Periodo
+Valor ajustado de las ofertas y n´ume-
+ro de ventas realizadas en un periodo
+espec´ıfico.
+2.2.
+Dimensiones
+Las dimensiones son atributos cualitativos que permiten segmentar y categorizar las
+m´etricas para un an´alisis m´as detallado. Estas dimensiones son clave para comprender
+los datos en su contexto y generar insights relevantes. A continuaci´on, se presentan las
+principales dimensiones organizadas por fuente de datos:
+Fuente de Datos
+Dimensiones
+Descripci´on
+Google Analytics
+Canal,
+Evento,
+Page
+Path
+(URL),
+Fuente,
+Medio
+Dimensiones relacionadas con la fuen-
+te y comportamiento del usuario en el
+sitio web.
+Google Search Con-
+sole
+Canal, Palabras Clave,
+B´usquedas
+en
+las
+que
+aparecemos
+Informaci´on de b´usqueda org´anica y
+t´erminos relevantes.
+Meta Ads
+Campa˜na,
+Grupo
+de
+Anuncios, Objetivo
+Informaci´on sobre la configuraci´on y
+segmentaci´on de campa˜nas.
+Google Ads
+Campa˜na,
+Grupo
+de
+Anuncios, Objetivo
+Estructura de campa˜nas en Google
+Ads.
+Facebook
+Post, Tipo de Post, Ca-
+nal
+Dimensiones relacionadas con publica-
+ciones en Facebook.
+Instagram
+Post, Tipo de Post, Ca-
+nal
+Dimensiones relacionadas con publica-
+ciones en Instagram.
+Youtube
+Post, Tipo de Post, Ca-
+nal
+Dimensiones relacionadas con publica-
+ciones en Youtube.
+TikTok
+Post
+Dimensiones relacionadas con publica-
+ciones en TikTok.
+6
+Fuente de Datos
+Dimensiones
+Descripci´on
+Salesforce
+Marke-
+ting Cloud
+Journeys,
+Mensajes,
+Campa˜nas
+Dimensiones
+relacionadas
+con
+cam-
+pa˜nas de marketing automatizadas.
+Prospectos
+Zona,
+Organizaci´on
+de
+ventas, Unidad organi-
+zativa,
+Departamento,
+Creado por (Oferta de
+venta), Fase de Venta,
+Producto, Color, Motivo
+de
+rechazo
+(art´ıculo),
+¿C´omo
+se
+enter´o
+de
+la
+motocicleta?,
+Moto
+digital
+Regi´on geogr´afica, divisi´on interna, ni-
+vel organizativo, ubicaci´on geogr´afica,
+tipo de asesor, estado actual de la ven-
+ta, modelo de la motocicleta, color,
+raz´on de rechazo, fuente de captaci´on
+de clientes y tipo digital de la moto aso-
+ciada.
+Ventas
+Zona,
+Organizaci´on
+de
+ventas, Unidad organi-
+zativa,
+Departamento,
+Creado por (Oferta de
+venta), Fase de Venta,
+Producto, Color, Motivo
+de
+rechazo
+(art´ıculo),
+¿C´omo se enter´o de la
+motocicleta?, Moto digi-
+tal, Asesor responsable,
+Concesionario
+Regi´on
+geogr´afica,
+divisi´on
+interna,
+unidad espec´ıfica, ubicaci´on geogr´afica,
+canal de ventas, estado de la venta, mo-
+delo y color del producto, raz´on del re-
+chazo, fuente de captaci´on del cliente,
+asesor responsable y concesionario aso-
+ciado.
+7
+3.
+Proceso ETL (Extract, Transform, Load)
+El proceso ETL es fundamental para la implementaci´on del Data Warehouse, ya que
+permite la extracci´on, transformaci´on y carga de datos desde m´ultiples fuentes hacia un
+repositorio centralizado. Este proceso garantiza la calidad, consistencia y disponibilidad
+de los datos para su an´alisis. A continuaci´on, se describen las etapas clave del proceso
+ETL para este proyecto, haciendo ´enfasis en el uso de BigQuery, Python y SQL.
+3.1.
+Etapas del Proceso ETL
+3.1.1.
+Extracci´on (Extract)
+La extracci´on de datos es la primera etapa del proceso ETL y se centra en obtener
+informaci´on desde diversas fuentes, como Google Analytics, Meta Ads, Salesforce Marke-
+ting Cloud, y otras. El enfoque principal es capturar datos de forma eficiente, asegurando
+su integridad.
+Para esta etapa, se utilizan las siguientes tecnolog´ıas:
+APIs espec´ıficas: Se emplean APIs nativas como la Google Analytics Data API,
+Meta Graph API, y Salesforce Marketing Cloud API para acceder a los datos.
+Python: Python es utilizado como el lenguaje principal para interactuar con las
+APIs, gracias a su capacidad de manejar peticiones HTTP, autenticaci´on OAuth2,
+y procesar respuestas JSON o XML. Librer´ıas como requests, pandas y google-api-
+python-client son fundamentales.
+BigQuery Data Transfer Service: Para fuentes compatibles, como Google Ads
+y YouTube, este servicio gestionado permite la transferencia directa de datos hacia
+BigQuery sin necesidad de desarrollos adicionales.
+El resultado de esta etapa son datos brutos organizados en formatos est´andar como
+JSON, CSV o almacenados directamente en tablas temporales de BigQuery.
+3.1.2.
+Transformaci´on (Transform)
+La transformaci´on es la etapa m´as cr´ıtica del proceso ETL, donde los datos brutos se
+convierten en informaci´on ´util y estructurada para el an´alisis. En esta etapa se aplican
+diversas operaciones para limpiar, enriquecer y estandarizar los datos:
+Python: Se utiliza Python junto con librer´ıas como pandas y numpy para realizar
+tareas de limpieza y preprocesamiento de datos. Estas tareas incluyen:
+• Eliminaci´on de duplicados.
+• Manejo de valores faltantes.
+• Conversi´on de formatos (e.g., fechas, monedas).
+BigQuery: Una vez preprocesados, los datos son transformados mediante consultas
+SQL en BigQuery. Este servicio es ideal para manejar grandes vol´umenes de datos
+y permite realizar operaciones como:
+• Estandarizaci´on: Uso de SQL para uniformar nombres de campos, normalizar
+datos y asegurar consistencia entre diferentes fuentes.
+8
+• Integraci´on: Uso de joins para relacionar datos de diferentes tablas y crear
+una visi´on unificada. Por ejemplo, conectar datos de campa˜nas de Meta Ads
+con datos de desempe˜no web de Google Analytics.
+• Enriquecimiento: C´alculo de m´etricas derivadas como ROI (return on in-
+vestment), tasas de conversi´on y CPC (cost per click) utilizando funciones
+anal´ıticas avanzadas de SQL.
+Scripts ETL escalables: Se desarrollan scripts en Python para orquestar las trans-
+formaciones, asegurando que las tareas se ejecuten en el orden correcto. Estos scripts
+se integran con Cloud Composer y Cloud Run.
+El objetivo principal de esta etapa es entregar datos limpios, estructurados y listos
+para su almacenamiento definitivo en el Data Warehouse.
+3.1.3.
+Carga (Load)
+En esta ´ultima etapa, los datos transformados son cargados de forma incremental y
+optimizada en Cloud SQL que act´ua como el repositorio central del Data Warehouse.
+La integraci´on con otras herramientas como BigQuery permite transformar y manejar
+grandes vol´umenes de datos provenientes de fuentes como Google Ads y Google Search
+Console antes de ser almacenados en Cloud SQL.
+Cloud SQL:
+• Carga incremental: Los datos procesados y transformados se cargan de ma-
+nera incremental en Cloud SQL, evitando duplicidad y asegurando una actua-
+lizaci´on eficiente del repositorio.
+• Dise˜no de base de datos: Cloud SQL almacena los datos en tablas relacio-
+nales dise˜nadas para optimizar consultas y facilitar la integraci´on con herra-
+mientas anal´ıticas como Power BI.
+• Validaci´on de datos: Se implementan consultas SQL para verificar la calidad
+de los datos cargados en Cloud SQL, asegurando su consistencia con los datos
+transformados en etapas anteriores.
+BigQuery:
+• Transformaci´on previa: BigQuery se utiliza como un entorno de procesa-
+miento intermedio para transformar datos de fuentes como Google Ads, Goo-
+gle Search Console y YouTube. Sus capacidades permiten manejar grandes
+vol´umenes de datos y realizar operaciones anal´ıticas avanzadas antes de cargar
+los resultados a Cloud SQL.
+• Optimizaci´on de datos: En esta etapa, se realizan operaciones como la agre-
+gaci´on de m´etricas, el enriquecimiento de datos y la creaci´on de vistas para
+simplificar la carga en Cloud SQL.
+Los datos almacenados en Cloud SQL est´an estructurados para consultas relacionales
+y an´alisis multidimensionales. Este dise˜no asegura que los datos puedan ser consumidos
+directamente por herramientas de visualizaci´on como Power BI.
+9
+Figura 1: Diagrama de despliege
+3.2.
+Automatizaci´on del Proceso ETL
+El proceso ETL est´a completamente automatizado para minimizar la intervenci´on
+manual y garantizar la consistencia en la actualizaci´on de datos. Las herramientas clave
+para esta automatizaci´on incluyen:
+Cloud Composer/Cloud run: Se utiliza para orquestar y programar las diferentes
+etapas del pipeline ETL, garantizando la ejecuci´on ordenada de las tareas y el manejo
+de dependencias.
+BigQuery Data Transfer Service: Facilita la integraci´on y extracci´on de datos
+directamente desde fuentes compatibles, como Google Ads y Google Search Console.
+Python: Scripts personalizados desarrollados en Python manejan tareas espec´ıfi-
+cas de extracci´on y transformaci´on, garantizando flexibilidad y adaptabilidad en el
+pipeline ETL.
+Cloud SQL Managed Services: Se configuran procesos autom´aticos de inserci´on
+y actualizaci´on de datos en Cloud SQL, optimizando la sincronizaci´on entre las
+etapas de transformaci´on y almacenamiento final.
+3.3.
+Beneficios del Proceso ETL
+El enfoque combinado de BigQuery y Cloud SQL en el proceso ETL proporciona
+m´ultiples beneficios:
+Centralizaci´on en Cloud SQL: Almacenar los datos transformados en Cloud SQL
+permite mantener una estructura relacional ´optima, compatible con herramientas
+
+User Query: Qué fuentes de datos están integradas
+2025-03-03 20:11:46,896 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-03 20:11:46,902 - INFO - LLM response: Las fuentes de datos que están integradas en el Data Warehouse de Honda son las siguientes:
+
+1. **Google Analytics**: Proporciona métricas relacionadas con el comportamiento del usuario en el sitio web.
+2. **Google Search Console**: Ofrece datos sobre el desempeño orgánico en motores de búsqueda.
+3. **Meta Ads**: Incluye métricas de campañas publicitarias en Facebook e Instagram.
+4. **Google Ads**: Proporciona rendimiento y eficiencia de campañas en Google Ads.
+5. **Facebook**: Ofrece datos sobre engagement y alcance de publicaciones orgánicas en Facebook.
+6. **Instagram**: Similar a Facebook, proporciona métricas sobre engagement y alcance de publicaciones.
+7. **YouTube**: Incluye métricas de engagement y alcance de publicaciones orgánicas en YouTube.
+8. **TikTok**: Proporciona métricas de engagement y alcance de publicaciones orgánicas.
+9. **Salesforce Marketing Cloud**: Ofrece métricas relacionadas con campañas de email marketing.
+10. **Prospectos**: Incluye información sobre ofertas realizadas a los prospectos.
+11. **Ventas**: Proporciona datos sobre el valor ajustado de las ofertas y el número de ventas en un periodo específico.
+
+Las fuentes Clarity y Semrush no están integradas inicialmente, ya que su inclusión dependerá de la definición específica de la información que se desea extraer de estas plataformas.
+2025-03-03 20:12:46,213 - WARNING - Not Found: /favicon.ico
+2025-03-04 13:19:55,296 - WARNING - Not Found: /docs
+2025-03-04 13:22:31,864 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/RAG_SaaS/urls.py changed, reloading.
+2025-03-04 13:23:29,966 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/RAG_SaaS/urls.py changed, reloading.
+2025-03-04 13:25:09,325 - WARNING - Not Found: /DOCS
+2025-03-04 13:25:14,724 - ERROR - Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2025-03-04 13:44:40,104 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/RAG_SaaS/settings.py changed, reloading.
+2025-03-04 13:45:44,410 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/RAG_SaaS/urls.py changed, reloading.
+2025-03-04 13:45:51,972 - ERROR - Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2025-03-04 13:48:46,206 - ERROR - Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2025-03-04 13:55:35,065 - ERROR - Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2025-03-04 13:57:48,353 - ERROR - Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/renderers.py", line 726, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2025-03-04 13:59:19,777 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/RAG_SaaS/settings.py changed, reloading.
+2025-03-04 13:59:33,309 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/RAG_SaaS/urls.py changed, reloading.
+2025-03-04 13:59:41,206 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/RAG_SaaS/urls.py changed, reloading.
+2025-03-04 13:59:47,701 - WARNING - Forbidden: /docs/
+2025-03-04 15:38:35,250 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/views.py changed, reloading.
+2025-03-04 15:54:32,356 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/views.py changed, reloading.
+2025-03-04 15:55:52,244 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/views.py changed, reloading.
+2025-03-04 15:59:42,540 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/views.py changed, reloading.
+2025-03-04 16:04:34,026 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/views.py changed, reloading.
+2025-03-04 16:05:03,079 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/views.py changed, reloading.
+2025-03-04 16:08:14,666 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/urls.py changed, reloading.
+2025-03-04 16:12:39,589 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/urls.py changed, reloading.
+2025-03-04 16:15:09,567 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/urls.py changed, reloading.
+2025-03-04 16:33:47,876 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/urls.py changed, reloading.
+2025-03-04 16:34:11,801 - ERROR - Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/schemas/views.py", line 48, in handle_exception
+    return super().handle_exception(exc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/schemas/views.py", line 37, in get
+    schema = self.schema_generator.get_schema(request, self.public)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/schemas/coreapi.py", line 158, in get_schema
+    links = self.get_links(None if public else request)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/proyecto1/lib/python3.12/site-packages/rest_framework/schemas/coreapi.py", line 145, in get_links
+    link = view.schema.get_link(path, method, base_url=self.url)
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AutoSchema' object has no attribute 'get_link'
+2025-03-04 16:35:15,399 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/urls.py changed, reloading.
+2025-03-04 16:35:29,560 - INFO - /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/rag_app/views.py changed, reloading.
+2025-03-04 16:37:30,692 - WARNING - Forbidden: /docs/
+2025-03-04 17:23:09,433 - INFO - 📂 Procesando documento: Real_Analysis___Problem_Sets (/Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/Real_Analysis___Problem_Sets.pdf)
+2025-03-04 17:23:09,434 - INFO - 📖 Extracting text from PDF: /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/Real_Analysis___Problem_Sets.pdf
+2025-03-04 17:23:09,506 - INFO - 📜 Documento leído, longitud: 3974 caracteres
+2025-03-04 17:23:09,507 - INFO - ✂️ Documento dividido en 1 chunks
+2025-03-04 17:23:11,237 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 17:23:12,217 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 17:23:13,264 - INFO - 🎯 Documento 'Real_Analysis___Problem_Sets' procesado con éxito
+2025-03-04 17:24:09,354 - INFO - 📖 Recuperando chunks de: Real_Analysis___Problem_Sets
+2025-03-04 17:24:10,482 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 17:24:10,813 - INFO - 📌 Selected Chunk ID: 5472 from Document: Real_Analysis___Problem_Sets (Score: 0.0685)
+2025-03-04 17:24:10,891 - INFO - 📌 Selected Chunk ID: 5473 from Document: Real_Analysis___Problem_Sets (Score: 0.0685)
+2025-03-04 17:24:10,892 - INFO - 🔍 Relevant Chunks Used:
+Chunk 5472 from Real_Analysis___Problem_Sets: Math 112: Introductory Real Analysis
+Harvard Unive...
+Chunk 5473 from Real_Analysis___Problem_Sets: Math 112: Introductory Real Analysis
+Harvard Unive...
+2025-03-04 17:24:10,893 - INFO - Sending query to LLM: Context:
+Document: Real_Analysis___Problem_Sets
+Chunk 5472:
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Problem Set 4 - Solution
+Sim´on Caicedo Graciano
+Problem 1. (Exercise 2.12 in Rudin) Let K ⊂R consist of 0 and the numbers
+1
+n, for
+n = 1, 2, 3, . . .. That is,
+K = {0} ∪{1
+n | n = 1, 2, 3, . . .}.
+Prove that K is compact directly from the definition (without using the Heine-Borel theo-
+rem).
+Proof. Note that if x ∈K, then 0 ≤x ≤1. Let {Gα} be an open cover of K. Since 0 ∈K,
+and we know that {Gα} is the union of open sets of R, let Gα0 ∈{Gα} be an open set that
+covers 0. Given that Gα0 is open in R, there exists r such that 0 < r < 1 and (−r, r) ⊂Gα0.
+It follows that
+(−r, r) ∩K = {0} ∪
+1
+n | 1
+n < r
+
+.
+Let
+A = K \ (−r, r) =
+1
+n ∈K | 1
+n ≥r
+
+.
+Since 1
+n ≥r, then n ≤1
+r, which implies that A contains finitely many points of K, as there
+are only a finite set of N numbers of K such that
+0 < r ≤1
+n ≤1.
+Let Gα1, Gα2, Gα3, . . . , GαN be open sets in {Gα}, each containing a point 1
+n ∈A . Then, we
+can define the following finite subcover of K:
+K ⊂Gα0 ∪Gα1 ∪Gα2 ∪· · · ∪GαN.
+Problem 2. (Exercise 2.14 in Rudin) Give an example of an open cover of the open interval
+(0, 1) ⊂R which has no finite subcover (and prove that property).
+An example of an open cover of the open interval (0, 1) ⊂R which has no finite subcover is:
+{Vn}∞
+n=2 ,
+where
+Vn =
+
+0, 1 −1
+n
+
+Note that each Vn is an open interval in R, so every Vn is open.
+Proof. {Vn}∞
+n=2 clearly covers (0, 1) ⊂R as for any x ∈(0, 1), we have:
+0 < x < 1 −1
+n
+1
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Which means that we can always choose an n sufficiently large so that x < 1 −1
+n holds.
+Therefore,
+∞
+[
+n=2
+Vn ⊃(0, 1).
+However, note that {Vn}∞
+n=2 does not have a finite subcover that covers (0, 1). To show that,
+suppose, to get a contradiction, that there is a finite subcollection {Vn1, Vn2, Vn3, . . . , Vnk}
+such that
+Vn1 ⊂Vn2 ⊂· · · ⊂Vnk
+and
+(0, 1) ⊂Vn1 ∪Vn2 ∪Vn3 ∪· · · ∪Vnk.
+Since every Vn ∈{Vn1, Vn2, . . . , Vnk} is a subset of Vnk = (0, 1 −
+1
+nk ), then
+k[
+n=1
+Vn ⊂
+
+0, 1 −1
+nk
+
+.
+However, note that the interval (0, 1 −
+1
+nk ) does not cover the points in
+h
+1 −
+1
+nk , 1
+
+. This
+implies that it fails to cover entirely (0, 1), which is a contradiction. Thus, not every open
+cover of (0, 1) has a finite subcover, which means that (0, 1) is not compact.
+Problem 3. (Exercise 2.15 in Rudin)
+1. Construct a collection of closed subsets {Kα}α∈J of R such that the intersection of
+every (nonempty) finite subcollection of {Kα}α∈J is nonempty, while ∩α∈JKα = ∅.
+2. Do the same with the word “closed” replaced by “bounded”.
+Problem 4. Let A and B be connected subsets of a metric space X. If A ∩B is nonempty,
+prove that A ∪B is connected.
+Proof. For the sake of contradiction, assume A ∪B is not connected. Then there exist two
+non-empty disjoint sets C ⊆X and D ⊆X, such that:
+A ∪B = C ∪D
+where C ∩D = ∅and C ∩D = ∅. Since A is connected, A cannot be split into two non-empty
+disjoint sets. This implies that if x ∈A, then x ∈C or x ∈D, but x /∈C ∩D, i.e., A must
+lie entirely in C or entirely in D. Similarly, since B is connected, then if y ∈B, y ∈C or
+y ∈D, but y /∈C ∩D. That is, B must lie entirely in C or entirely in D.
+Assume that A ⊆C and B ⊆D. Let z ∈A ∩B. Then z ∈A and z ∈B. Since A ⊆C and
+B ⊆D, then z ∈C and z ∈D, which implies that z ∈C ∩D, so C ∩D ̸= ∅. However, this
+2
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+is a contradiction, since C and D are separated, which implies C ∩D = ∅, as C ∩D = ∅
+and D ⊆D. Without loss of generality, assuming A ⊆D and B ⊆C leads to the same
+contradiction.
+Therefore, A and B must lie entirely in the same set (either C or D). If A and B are
+entirely in C, then D is empty, which is a contradiction, because D cannot be empty by
+assumption. Similarly, if A and B lie entirely in D, C would be empty, which is also a
+contradiction. Therefore, the assumption that A ∪B is disconnected must be false. Thus,
+A ∪B is connected.
+3
+
+Document: Real_Analysis___Problem_Sets
+Chunk 5473:
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Problem Set 4 - Solution
+Sim´on Caicedo Graciano
+Problem 1. (Exercise 2.12 in Rudin) Let K ⊂R consist of 0 and the numbers
+1
+n, for
+n = 1, 2, 3, . . .. That is,
+K = {0} ∪{1
+n | n = 1, 2, 3, . . .}.
+Prove that K is compact directly from the definition (without using the Heine-Borel theo-
+rem).
+Proof. Note that if x ∈K, then 0 ≤x ≤1. Let {Gα} be an open cover of K. Since 0 ∈K,
+and we know that {Gα} is the union of open sets of R, let Gα0 ∈{Gα} be an open set that
+covers 0. Given that Gα0 is open in R, there exists r such that 0 < r < 1 and (−r, r) ⊂Gα0.
+It follows that
+(−r, r) ∩K = {0} ∪
+1
+n | 1
+n < r
+
+.
+Let
+A = K \ (−r, r) =
+1
+n ∈K | 1
+n ≥r
+
+.
+Since 1
+n ≥r, then n ≤1
+r, which implies that A contains finitely many points of K, as there
+are only a finite set of N numbers of K such that
+0 < r ≤1
+n ≤1.
+Let Gα1, Gα2, Gα3, . . . , GαN be open sets in {Gα}, each containing a point 1
+n ∈A . Then, we
+can define the following finite subcover of K:
+K ⊂Gα0 ∪Gα1 ∪Gα2 ∪· · · ∪GαN.
+Problem 2. (Exercise 2.14 in Rudin) Give an example of an open cover of the open interval
+(0, 1) ⊂R which has no finite subcover (and prove that property).
+An example of an open cover of the open interval (0, 1) ⊂R which has no finite subcover is:
+{Vn}∞
+n=2 ,
+where
+Vn =
+
+0, 1 −1
+n
+
+Note that each Vn is an open interval in R, so every Vn is open.
+Proof. {Vn}∞
+n=2 clearly covers (0, 1) ⊂R as for any x ∈(0, 1), we have:
+0 < x < 1 −1
+n
+1
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Which means that we can always choose an n sufficiently large so that x < 1 −1
+n holds.
+Therefore,
+∞
+[
+n=2
+Vn ⊃(0, 1).
+However, note that {Vn}∞
+n=2 does not have a finite subcover that covers (0, 1). To show that,
+suppose, to get a contradiction, that there is a finite subcollection {Vn1, Vn2, Vn3, . . . , Vnk}
+such that
+Vn1 ⊂Vn2 ⊂· · · ⊂Vnk
+and
+(0, 1) ⊂Vn1 ∪Vn2 ∪Vn3 ∪· · · ∪Vnk.
+Since every Vn ∈{Vn1, Vn2, . . . , Vnk} is a subset of Vnk = (0, 1 −
+1
+nk ), then
+k[
+n=1
+Vn ⊂
+
+0, 1 −1
+nk
+
+.
+However, note that the interval (0, 1 −
+1
+nk ) does not cover the points in
+h
+1 −
+1
+nk , 1
+
+. This
+implies that it fails to cover entirely (0, 1), which is a contradiction. Thus, not every open
+cover of (0, 1) has a finite subcover, which means that (0, 1) is not compact.
+Problem 3. (Exercise 2.15 in Rudin)
+1. Construct a collection of closed subsets {Kα}α∈J of R such that the intersection of
+every (nonempty) finite subcollection of {Kα}α∈J is nonempty, while ∩α∈JKα = ∅.
+2. Do the same with the word “closed” replaced by “bounded”.
+Problem 4. Let A and B be connected subsets of a metric space X. If A ∩B is nonempty,
+prove that A ∪B is connected.
+Proof. For the sake of contradiction, assume A ∪B is not connected. Then there exist two
+non-empty disjoint sets C ⊆X and D ⊆X, such that:
+A ∪B = C ∪D
+where C ∩D = ∅and C ∩D = ∅. Since A is connected, A cannot be split into two non-empty
+disjoint sets. This implies that if x ∈A, then x ∈C or x ∈D, but x /∈C ∩D, i.e., A must
+lie entirely in C or entirely in D. Similarly, since B is connected, then if y ∈B, y ∈C or
+y ∈D, but y /∈C ∩D. That is, B must lie entirely in C or entirely in D.
+Assume that A ⊆C and B ⊆D. Let z ∈A ∩B. Then z ∈A and z ∈B. Since A ⊆C and
+B ⊆D, then z ∈C and z ∈D, which implies that z ∈C ∩D, so C ∩D ̸= ∅. However, this
+2
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+is a contradiction, since C and D are separated, which implies C ∩D = ∅, as C ∩D = ∅
+and D ⊆D. Without loss of generality, assuming A ⊆D and B ⊆C leads to the same
+contradiction.
+Therefore, A and B must lie entirely in the same set (either C or D). If A and B are
+entirely in C, then D is empty, which is a contradiction, because D cannot be empty by
+assumption. Similarly, if A and B lie entirely in D, C would be empty, which is also a
+contradiction. Therefore, the assumption that A ∪B is disconnected must be false. Thus,
+A ∪B is connected.
+3
+
+User Query: dame los principales aspectos del documento
+2025-03-04 17:24:11,946 - INFO - 📖 Recuperando chunks de: Real_Analysis___Problem_Sets
+2025-03-04 17:24:13,842 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 17:24:14,191 - INFO - 📌 Selected Chunk ID: 5472 from Document: Real_Analysis___Problem_Sets (Score: 0.0685)
+2025-03-04 17:24:14,270 - INFO - 📌 Selected Chunk ID: 5473 from Document: Real_Analysis___Problem_Sets (Score: 0.0685)
+2025-03-04 17:24:14,272 - INFO - 🔍 Relevant Chunks Used:
+Chunk 5472 from Real_Analysis___Problem_Sets: Math 112: Introductory Real Analysis
+Harvard Unive...
+Chunk 5473 from Real_Analysis___Problem_Sets: Math 112: Introductory Real Analysis
+Harvard Unive...
+2025-03-04 17:24:14,272 - INFO - Sending query to LLM: Context:
+Document: Real_Analysis___Problem_Sets
+Chunk 5472:
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Problem Set 4 - Solution
+Sim´on Caicedo Graciano
+Problem 1. (Exercise 2.12 in Rudin) Let K ⊂R consist of 0 and the numbers
+1
+n, for
+n = 1, 2, 3, . . .. That is,
+K = {0} ∪{1
+n | n = 1, 2, 3, . . .}.
+Prove that K is compact directly from the definition (without using the Heine-Borel theo-
+rem).
+Proof. Note that if x ∈K, then 0 ≤x ≤1. Let {Gα} be an open cover of K. Since 0 ∈K,
+and we know that {Gα} is the union of open sets of R, let Gα0 ∈{Gα} be an open set that
+covers 0. Given that Gα0 is open in R, there exists r such that 0 < r < 1 and (−r, r) ⊂Gα0.
+It follows that
+(−r, r) ∩K = {0} ∪
+1
+n | 1
+n < r
+
+.
+Let
+A = K \ (−r, r) =
+1
+n ∈K | 1
+n ≥r
+
+.
+Since 1
+n ≥r, then n ≤1
+r, which implies that A contains finitely many points of K, as there
+are only a finite set of N numbers of K such that
+0 < r ≤1
+n ≤1.
+Let Gα1, Gα2, Gα3, . . . , GαN be open sets in {Gα}, each containing a point 1
+n ∈A . Then, we
+can define the following finite subcover of K:
+K ⊂Gα0 ∪Gα1 ∪Gα2 ∪· · · ∪GαN.
+Problem 2. (Exercise 2.14 in Rudin) Give an example of an open cover of the open interval
+(0, 1) ⊂R which has no finite subcover (and prove that property).
+An example of an open cover of the open interval (0, 1) ⊂R which has no finite subcover is:
+{Vn}∞
+n=2 ,
+where
+Vn =
+
+0, 1 −1
+n
+
+Note that each Vn is an open interval in R, so every Vn is open.
+Proof. {Vn}∞
+n=2 clearly covers (0, 1) ⊂R as for any x ∈(0, 1), we have:
+0 < x < 1 −1
+n
+1
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Which means that we can always choose an n sufficiently large so that x < 1 −1
+n holds.
+Therefore,
+∞
+[
+n=2
+Vn ⊃(0, 1).
+However, note that {Vn}∞
+n=2 does not have a finite subcover that covers (0, 1). To show that,
+suppose, to get a contradiction, that there is a finite subcollection {Vn1, Vn2, Vn3, . . . , Vnk}
+such that
+Vn1 ⊂Vn2 ⊂· · · ⊂Vnk
+and
+(0, 1) ⊂Vn1 ∪Vn2 ∪Vn3 ∪· · · ∪Vnk.
+Since every Vn ∈{Vn1, Vn2, . . . , Vnk} is a subset of Vnk = (0, 1 −
+1
+nk ), then
+k[
+n=1
+Vn ⊂
+
+0, 1 −1
+nk
+
+.
+However, note that the interval (0, 1 −
+1
+nk ) does not cover the points in
+h
+1 −
+1
+nk , 1
+
+. This
+implies that it fails to cover entirely (0, 1), which is a contradiction. Thus, not every open
+cover of (0, 1) has a finite subcover, which means that (0, 1) is not compact.
+Problem 3. (Exercise 2.15 in Rudin)
+1. Construct a collection of closed subsets {Kα}α∈J of R such that the intersection of
+every (nonempty) finite subcollection of {Kα}α∈J is nonempty, while ∩α∈JKα = ∅.
+2. Do the same with the word “closed” replaced by “bounded”.
+Problem 4. Let A and B be connected subsets of a metric space X. If A ∩B is nonempty,
+prove that A ∪B is connected.
+Proof. For the sake of contradiction, assume A ∪B is not connected. Then there exist two
+non-empty disjoint sets C ⊆X and D ⊆X, such that:
+A ∪B = C ∪D
+where C ∩D = ∅and C ∩D = ∅. Since A is connected, A cannot be split into two non-empty
+disjoint sets. This implies that if x ∈A, then x ∈C or x ∈D, but x /∈C ∩D, i.e., A must
+lie entirely in C or entirely in D. Similarly, since B is connected, then if y ∈B, y ∈C or
+y ∈D, but y /∈C ∩D. That is, B must lie entirely in C or entirely in D.
+Assume that A ⊆C and B ⊆D. Let z ∈A ∩B. Then z ∈A and z ∈B. Since A ⊆C and
+B ⊆D, then z ∈C and z ∈D, which implies that z ∈C ∩D, so C ∩D ̸= ∅. However, this
+2
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+is a contradiction, since C and D are separated, which implies C ∩D = ∅, as C ∩D = ∅
+and D ⊆D. Without loss of generality, assuming A ⊆D and B ⊆C leads to the same
+contradiction.
+Therefore, A and B must lie entirely in the same set (either C or D). If A and B are
+entirely in C, then D is empty, which is a contradiction, because D cannot be empty by
+assumption. Similarly, if A and B lie entirely in D, C would be empty, which is also a
+contradiction. Therefore, the assumption that A ∪B is disconnected must be false. Thus,
+A ∪B is connected.
+3
+
+Document: Real_Analysis___Problem_Sets
+Chunk 5473:
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Problem Set 4 - Solution
+Sim´on Caicedo Graciano
+Problem 1. (Exercise 2.12 in Rudin) Let K ⊂R consist of 0 and the numbers
+1
+n, for
+n = 1, 2, 3, . . .. That is,
+K = {0} ∪{1
+n | n = 1, 2, 3, . . .}.
+Prove that K is compact directly from the definition (without using the Heine-Borel theo-
+rem).
+Proof. Note that if x ∈K, then 0 ≤x ≤1. Let {Gα} be an open cover of K. Since 0 ∈K,
+and we know that {Gα} is the union of open sets of R, let Gα0 ∈{Gα} be an open set that
+covers 0. Given that Gα0 is open in R, there exists r such that 0 < r < 1 and (−r, r) ⊂Gα0.
+It follows that
+(−r, r) ∩K = {0} ∪
+1
+n | 1
+n < r
+
+.
+Let
+A = K \ (−r, r) =
+1
+n ∈K | 1
+n ≥r
+
+.
+Since 1
+n ≥r, then n ≤1
+r, which implies that A contains finitely many points of K, as there
+are only a finite set of N numbers of K such that
+0 < r ≤1
+n ≤1.
+Let Gα1, Gα2, Gα3, . . . , GαN be open sets in {Gα}, each containing a point 1
+n ∈A . Then, we
+can define the following finite subcover of K:
+K ⊂Gα0 ∪Gα1 ∪Gα2 ∪· · · ∪GαN.
+Problem 2. (Exercise 2.14 in Rudin) Give an example of an open cover of the open interval
+(0, 1) ⊂R which has no finite subcover (and prove that property).
+An example of an open cover of the open interval (0, 1) ⊂R which has no finite subcover is:
+{Vn}∞
+n=2 ,
+where
+Vn =
+
+0, 1 −1
+n
+
+Note that each Vn is an open interval in R, so every Vn is open.
+Proof. {Vn}∞
+n=2 clearly covers (0, 1) ⊂R as for any x ∈(0, 1), we have:
+0 < x < 1 −1
+n
+1
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+Which means that we can always choose an n sufficiently large so that x < 1 −1
+n holds.
+Therefore,
+∞
+[
+n=2
+Vn ⊃(0, 1).
+However, note that {Vn}∞
+n=2 does not have a finite subcover that covers (0, 1). To show that,
+suppose, to get a contradiction, that there is a finite subcollection {Vn1, Vn2, Vn3, . . . , Vnk}
+such that
+Vn1 ⊂Vn2 ⊂· · · ⊂Vnk
+and
+(0, 1) ⊂Vn1 ∪Vn2 ∪Vn3 ∪· · · ∪Vnk.
+Since every Vn ∈{Vn1, Vn2, . . . , Vnk} is a subset of Vnk = (0, 1 −
+1
+nk ), then
+k[
+n=1
+Vn ⊂
+
+0, 1 −1
+nk
+
+.
+However, note that the interval (0, 1 −
+1
+nk ) does not cover the points in
+h
+1 −
+1
+nk , 1
+
+. This
+implies that it fails to cover entirely (0, 1), which is a contradiction. Thus, not every open
+cover of (0, 1) has a finite subcover, which means that (0, 1) is not compact.
+Problem 3. (Exercise 2.15 in Rudin)
+1. Construct a collection of closed subsets {Kα}α∈J of R such that the intersection of
+every (nonempty) finite subcollection of {Kα}α∈J is nonempty, while ∩α∈JKα = ∅.
+2. Do the same with the word “closed” replaced by “bounded”.
+Problem 4. Let A and B be connected subsets of a metric space X. If A ∩B is nonempty,
+prove that A ∪B is connected.
+Proof. For the sake of contradiction, assume A ∪B is not connected. Then there exist two
+non-empty disjoint sets C ⊆X and D ⊆X, such that:
+A ∪B = C ∪D
+where C ∩D = ∅and C ∩D = ∅. Since A is connected, A cannot be split into two non-empty
+disjoint sets. This implies that if x ∈A, then x ∈C or x ∈D, but x /∈C ∩D, i.e., A must
+lie entirely in C or entirely in D. Similarly, since B is connected, then if y ∈B, y ∈C or
+y ∈D, but y /∈C ∩D. That is, B must lie entirely in C or entirely in D.
+Assume that A ⊆C and B ⊆D. Let z ∈A ∩B. Then z ∈A and z ∈B. Since A ⊆C and
+B ⊆D, then z ∈C and z ∈D, which implies that z ∈C ∩D, so C ∩D ̸= ∅. However, this
+2
+Math 112: Introductory Real Analysis
+Harvard University, Spring 2025
+is a contradiction, since C and D are separated, which implies C ∩D = ∅, as C ∩D = ∅
+and D ⊆D. Without loss of generality, assuming A ⊆D and B ⊆C leads to the same
+contradiction.
+Therefore, A and B must lie entirely in the same set (either C or D). If A and B are
+entirely in C, then D is empty, which is a contradiction, because D cannot be empty by
+assumption. Similarly, if A and B lie entirely in D, C would be empty, which is also a
+contradiction. Therefore, the assumption that A ∪B is disconnected must be false. Thus,
+A ∪B is connected.
+3
+
+User Query: dame los principales aspectos del documento
+2025-03-04 17:24:17,612 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 17:24:17,658 - INFO - LLM response: El documento es un conjunto de problemas y soluciones de un curso de Análisis Real (Math 112) en la Universidad de Harvard, correspondiente a la primavera de 2025. Aquí están los principales aspectos:
+
+1. **Problema 1**: Se demuestra que el conjunto \( K = \{0\} \cup \{1/n | n = 1, 2, 3, \ldots\} \) es compacto utilizando la definición de compacidad, sin recurrir al teorema de Heine-Borel. Se utiliza un argumento sobre cubiertas abiertas y la naturaleza de los elementos en \( K \).
+
+2. **Problema 2**: Se proporciona un ejemplo de una cubierta abierta del intervalo abierto \( (0, 1) \) que no tiene subcubierta finita. La cubierta está formada por los conjuntos \( V_n = (0, 1 - 1/n) \) para \( n \geq 2 \). Se demuestra que no se puede cubrir completamente \( (0, 1) \) con un número finito de estos conjuntos.
+
+3. **Problema 3**: Se solicita construir colecciones de conjuntos cerrados en \( \mathbb{R} \) tal que la intersección de cada subcolección finita no esté vacía, mientras que la intersección de todos los conjuntos es vacía. También se pide lo mismo pero con la palabra "cerrado" reemplazada por "acotado".
+
+4. **Problema 4**: Se demuestra que la unión de dos conjuntos conectados \( A \) y \( B \) en un espacio métrico \( X \) es también conectada, bajo la condición de que su intersección no esté vacía. Se utiliza una prueba por contradicción para llegar a esta conclusión.
+
+En resumen, el documento aborda temas fundamentales en análisis real, como compacidad, cubiertas abiertas, propiedades de conjuntos cerrados y conectividad en espacios métricos.
+2025-03-04 17:24:20,824 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-04 17:24:20,830 - INFO - LLM response: El documento es un conjunto de problemas y soluciones de un curso de Análisis Real (Math 112) en la Universidad de Harvard, correspondiente a la primavera de 2025 y escrito por Simón Caicedo Graciano. A continuación, se presentan los principales aspectos del documento:
+
+1. **Problemas y Ejercicios**: Se abordan varios problemas relacionados con conceptos fundamentales del análisis real. Estos incluyen:
+   - **Compactitud**: Se demuestra que un conjunto \( K \) que incluye \( 0 \) y \( \frac{1}{n} \) (para \( n = 1, 2, 3, \ldots \)) es compacto utilizando la definición de compactitud y sin recurrir al teorema de Heine-Borel.
+   - **Cobertura Abierta**: Se presenta un ejemplo de una cobertura abierta del intervalo \( (0, 1) \) que no tiene una subcobertura finita, probando que \( (0, 1) \) no es compacto.
+   - **Intersección de Conjuntos**: Se plantea un problema sobre la construcción de colecciones de conjuntos cerrados cuyas intersecciones finitas son no vacías, pero cuya intersección total es vacía.
+   - **Conectividad**: Se demuestra que la unión de dos conjuntos conectados en un espacio métrico es también conectada si su intersección no es vacía.
+
+2. **Método de Prueba**: El documento utiliza un enfoque riguroso y formal para las pruebas matemáticas, incluyendo supuestos, contradicciones y definiciones precisas de los conceptos involucrados.
+
+3. **Estructura**: Cada problema se presenta con su enunciado seguido de una solución detallada que muestra la lógica y el razonamiento detrás del resultado.
+
+4. **Referencias**: Los problemas se basan en ejercicios del libro "Principles of Mathematical Analysis" de Walter Rudin, que es un texto clásico en el campo del análisis real.
+
+Este documento es un recurso útil para estudiantes de análisis matemático que buscan comprender conceptos de compactitud, cobertura abierta, intersecciones de conjuntos y conectividad, junto con ejemplos y demostraciones claras.
+2025-03-04 18:57:39,950 - INFO - 📂 Procesando documento: Survey_of_small_language_models (/Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/Survey_of_small_language_models.pdf)
+2025-03-04 18:57:39,951 - INFO - 📖 Extracting text from PDF: /Users/esteban.caicedo/Library/CloudStorage/OneDrive-WPPCloud/Desktop/MaIA/3 SEMESTRE/Desarrollo de soluciones cloud/Semana 6/ENTREGA 1/RAG_SaaS/media/documents/Survey_of_small_language_models.pdf
+2025-03-04 18:57:40,051 - INFO - 📜 Documento leído, longitud: 84626 caracteres
+2025-03-04 18:57:40,064 - INFO - ✂️ Documento dividido en 11 chunks
+2025-03-04 18:57:42,143 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:43,872 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:44,895 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:44,939 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:45,003 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:45,096 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:46,306 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:46,516 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:46,559 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:46,774 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:46,946 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:47,047 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:49,258 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-03-04 18:57:49,458 - INFO - 🎯 Documento 'Survey_of_small_language_models' procesado con éxito

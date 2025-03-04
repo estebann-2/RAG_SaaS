@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAG SaaS - Chat</title>
-    <link rel="stylesheet" href="{% static 'rag_app/css/styles_v2.css' %}">
+    <link rel="stylesheet" href="{% static 'rag_app/css/styles_v1.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'rag_app/favicon/favicon.ico' %}">
 </head>
 <body>
@@ -14,33 +14,35 @@
         
         <!-- Sidebar: Conversation History + New Conversation -->
         <aside class="sidebar">
-            <h2>💬 Conversaciones</h2>
+            <h2>Conversaciones</h2>
             
             <!-- New Conversation Button -->
             <a href="{% url 'start_conversation' %}" class="new-conversation-button">➕ Nueva Conversación</a>
+        
+            <!-- Conversation List with Scrollable Section -->
+            <div class="conversation-list-container">
+                <ul class="conversation-list">
+                    {% for conversation in conversations %}
+                        {% if conversation.id %}
+                            <li>
+                                <a href="{% url 'conversation_detail' conversation.id %}" class="conversation-link">
+                                    📜 {{ conversation.title }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% empty %}
+                        <li class="empty-message">No hay conversaciones previas.</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-            <!-- Conversation List -->
-            <ul class="conversation-list">
-                {% for conversation in conversations %}
-                    {% if conversation.id %}
-                        <li>
-                            <a href="{% url 'conversation_detail' conversation.id %}" class="conversation-link">
-                                📜 {{ conversation.title }}
-                            </a>
-                        </li>
-                    {% endif %}
-                {% empty %}
-                    <li class="empty-message">No hay conversaciones previas.</li>
-                {% endfor %}
-            </ul>
-
-            <!-- Logout Button (Only if User is Authenticated) -->
+            <!-- Logout Button Always Visible -->
             {% if user.is_authenticated %}
-                <form action="{% url 'logout' %}" method="post" class="logout-form">
-                    {% csrf_token %}
-                    <button type="submit" class="logout-button">🚪 Cerrar sesión</button>
-                </form>
-            {% endif %}
+            <form action="{% url 'logout' %}" method="post" class="logout-form">
+                {% csrf_token %}
+                <button type="submit" class="logout-button">🚪 Cerrar sesión</button>
+            </form>
+        {% endif %}
         </aside>
 
         <!-- ✅ Check if a conversation is selected -->
@@ -69,32 +71,36 @@
                 </section>
 
                 <!-- ✅ Message Input -->
-                <footer class="message-input">
-                    <form id="message-form" method="post" action="{% url 'send_message' conversation.id %}">
-                        {% csrf_token %}
+            <footer class="message-input">
+                <form id="message-form" method="post" action="{% url 'send_message' conversation.id %}">
+                    {% csrf_token %}
+                    <div class="input-container">
                         <input type="text" id="message-input" name="text" placeholder="Escribe un mensaje..." required>
                         <button type="submit">📩 Enviar</button>
-                    </form>
-                </footer>
+                    </div>
+                </form>
+            </footer>
 
             {% else %}
-                <!-- ✅ If no conversation exists, show file upload option -->
-                <div class="chat-box">
-                    <p class="empty-chat">📂 Sube un documento para comenzar.</p>
-                </div>
+            <!-- ✅ If no conversation exists, show file upload option -->
+            <div class="chat-box">
+                <p class="empty-chat">📂 Sube un documento para comenzar.</p>
+            </div>
 
-                <footer class="message-input">
-                    <form id="upload-form" method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        <label for="document">📂 Subir documento:</label>
+            <footer class="message-input">
+                <form id="upload-form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="input-container">
                         <input type="file" name="document" id="document" required>
                         <button type="submit">📤 Subir</button>
-                    </form>
-                    <div id="upload-status" style="display: none; margin-top: 10px;">
-                        ⏳ Subiendo archivo...
                     </div>
-                </footer>
+                </form>
+                <div id="upload-status" style="display: none; margin-top: 10px;">
+                    ⏳ Subiendo archivo...
+                </div>
+            </footer>
             {% endif %}
+
         </main>
 
     </div>

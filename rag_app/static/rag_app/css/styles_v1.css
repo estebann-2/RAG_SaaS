@@ -851,3 +851,131 @@ body {
 .message-input button:hover {
     background-color: #27ae60;
 }
+
+
+
+
+/* Sidebar styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh; /* Full height */
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+/* Scrollable conversation list */
+.conversation-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px); /* Adjust based on header and footer */
+    padding-right: 5px;
+}
+
+/* Ensure scrollbar is always visible */
+.conversation-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.conversation-list-container::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 3px;
+}
+
+.conversation-list-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Logout button stays at the bottom */
+.logout-form {
+    position: absolute;
+    padding: 20px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* ✅ Fix overlapping issue: Adjust main content */
+.chat-content {
+    margin-left: 270px; /* Make space for the sidebar */
+    width: calc(100% - 270px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+/* Message Input & Upload Form Styling */
+.message-input {
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+}
+
+/* Input and Button Container */
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    gap: 10px;
+}
+
+/* Larger Input Box */
+#message-input, #document {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;  /* Ensures it takes full available width */
+}
+
+/* Button Styling */
+button {
+    padding: 12px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
