@@ -5,6 +5,16 @@
 
 ---
 
+### Instructions to run on your own device:
+
+Reach this URL: http://23.22.249.53:8000/api/login/
+
+Use the following credentials:
+User: ubuntu
+Password: ubuntu
+
+Thank you very much!
+
 ## Tech Stack
 
 - **Backend**: Django 4.2.10
