@@ -1,0 +1,29 @@
+version: '3.8'
+ 
+services:
+
+  app:
+
+    build:
+
+      context: .
+
+      dockerfile: Dockerfile
+
+    container_name: my_python_app
+
+    ports:
+
+      - "8000:8000"  # Mapea el puerto del host al del contenedor
+
+    environment:
+
+      - PORT=8000  # Define la variable de entorno PORT
+
+    volumes:
+
+      - .:/app  # Monta el código fuente para facilitar el desarrollo
+
+    restart: always  # Reinicia el contenedor en caso de fallos
+
+ 
