@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAG SaaS - Login</title>
+    <title>Log In</title>
     <link rel="stylesheet" href="{% static 'rag_app/css/styles_v1.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'rag_app/favicon/favicon.ico' %}">
 </head>
@@ -12,7 +12,8 @@
     <div class="login-container">
         
         <!-- Title of the application -->
-        <h1 class="app-title">RAG SaaS</h1>
+        <h1 class="app-title">¡Bienvenido a Séneca AI!</h1>
+        <img src="https://senecode.virtual.uniandes.edu.co/image/Seneca_singotto.png" alt="seneca" width="200" height="300">
 
         <div class="login-box">
             <form method="post" class="login-form">
@@ -29,13 +30,13 @@
 
                 <!-- Username Input -->
                 <div class="input-group">
-                    <label for="username" class="input-label">Usuario</label>
+                    <label for="username" class="input-label">Ingresa tu usuario:</label>
                     {{ form.username }}
                 </div>
 
                 <!-- Password Input -->
                 <div class="input-group">
-                    <label for="password" class="input-label">Contraseña</label>
+                    <label for="password" class="input-label">Ingresa tu contraseña</label>
                     {{ form.password }}
                 </div>
 
