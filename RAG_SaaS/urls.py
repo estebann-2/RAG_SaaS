@@ -25,7 +25,7 @@ from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rag_app.urls')),  # Include app URLs
-    path('api/', include('rag_app.urls')),
+    path('api/', include('rag_app_apis.urls')),
     path('docs/', include_docs_urls(title='RAG SaaS documentation'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

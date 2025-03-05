@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-nf&e1vvw_dmvp%9ky+j#g+eryuo*($db=^4(k%)q(d4sgxk4+q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", 
+                 "localhost"]
+
 
 
 # Application definition
@@ -38,11 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'rest_framework',  # Django REST Framework
     'rest_framework_swagger',  # Optional Swagger UI
     'drf_yasg',  # For API schema generation
-    'rest_framework.documentation',
+    'corsheaders',
+    'rest_framework.authtoken',
+    'coreapi',
+    'rag_app',   # Frontend app
+    'rag_app_apis',  # API app
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,6 +59,18 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+
+CORS_ALLOW_CREDENTIALS = True  # Enable credentials
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000"
 ]
 
 
@@ -143,18 +162,15 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-# Application definition
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'rag_app',  # Add your app here
-    'rest_framework',
-]
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # ✅ Token Auth
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
 
 # Static and Media files settings
 STATIC_URL = '/static/'

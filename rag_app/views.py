@@ -6,26 +6,15 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Document, Message, Conversation
-from .forms import DocumentUploadForm, RegisterForm, MessageForm
+from .forms import DocumentUploadForm, MessageForm
 import os
 from .utils import process_document, query_llm
 from .retriever import retrieve_relevant_chunks
 import logging
 
-# ✅ User Registration
-def register_user(request):
-    if request.method == "POST":
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)  # Auto-login after registration
-            messages.success(request, "Registro exitoso. Bienvenido!")
-            return redirect('document_list')
-    else:
-        form = RegisterForm()
-    return render(request, 'rag_app/register.html', {'form': form})
 
-# ✅ User Login
+
+# User Login
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -41,7 +30,7 @@ def login_view(request):
     
     return render(request, 'rag_app/login.html', {'form': form})
 
-# ✅ User Logout
+# User Logout
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
@@ -59,24 +48,24 @@ def upload_document(request):
     if request.method == "POST" and request.FILES.get("document"):
         uploaded_file = request.FILES["document"]
 
-        # ✅ Extract the filename (without extension)
+        # Extract the filename (without extension)
         document_name = os.path.splitext(uploaded_file.name)[0]
 
-        # ✅ Ensure a conversation is created using the document title
+        # Ensure a conversation is created using the document title
         conversation = Conversation.objects.create(user=request.user, title=document_name)
 
-        # ✅ Save the uploaded document and link it to the conversation
+        # Save the uploaded document and link it to the conversation
         document = Document.objects.create(
             user=request.user,
             file=uploaded_file,
-            title=document_name,  # ✅ Store the document name
-            conversation=conversation  # ✅ Link document to conversation
+            title=document_name,  # Store the document name
+            conversation=conversation  # Link document to conversation
         )
 
-        # ✅ Process document for chunking & embedding (async recommended)
+        # Process document for chunking & embedding (async recommended)
         process_document(document)
 
-        # ✅ Create a system message to confirm the document upload
+        # Create a system message to confirm the document upload
         Message.objects.create(
             conversation=conversation,
             sender=request.user,  # Keeping sender as user for now
@@ -126,7 +115,7 @@ def start_conversation(request):
     return render(request, "rag_app/start_conversation.html")
 
 
-# ✅ View a Specific Conversation & Messages
+# View a Specific Conversation & Messages
 @login_required
 def conversation_detail(request, conversation_id):
     conversation = get_object_or_404(Conversation, id=conversation_id, user=request.user)
@@ -139,7 +128,7 @@ def conversation_detail(request, conversation_id):
         "form": form
     })
 
-# ✅ Send a Message and Get Response from LLM
+# Send a Message and Get Response from LLM
 @login_required
 def send_message(request, conversation_id):
     conversation = get_object_or_404(Conversation, id=conversation_id, user=request.user)
@@ -147,7 +136,7 @@ def send_message(request, conversation_id):
     if request.method == "POST":
         form = MessageForm(request.POST)
         if form.is_valid():
-            # ✅ Save user message
+            # Save user message
             user_message = form.save(commit=False)
             user_message.conversation = conversation
             user_message.sender = request.user

@@ -6,19 +6,20 @@ from .views import (
 )
 
 urlpatterns = [
-    # ✅ Authentication Routes
+    # Authentication Routes
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
 
-    # ✅ Home
+    # Home
     path('', home, name='home'),
 
-    # ✅ Conversations
+    # Conversations
     path('conversation/new/', start_conversation, name='start_conversation'),
     path('conversation/<int:conversation_id>/', conversation_detail, name='conversation_detail'),
     path('conversation/<int:conversation_id>/send/', send_message, name='send_message'),
     path('conversation/history/', conversation_history, name='conversation_history'),
 
-    # ✅ Documents
+    # Documents
     path("document/upload/", upload_document, name="upload_document"),
 ]
+

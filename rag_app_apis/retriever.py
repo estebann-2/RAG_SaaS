@@ -1,5 +1,5 @@
 from langchain.vectorstores import Chroma
-from .models import Chunk, Document
+from .models import APIChunk, APIDocument
 import numpy as np
 from .utils import embedding_model
 import logging
@@ -8,7 +8,7 @@ def retrieve_relevant_chunks(query, conversation,top_k=3):
     """Retrieves the most relevant document chunks using embeddings."""
 
     # Obtener el documento asociado a la conversación
-    document = Document.objects.filter(conversation=conversation).first()
+    document = APIDocument.objects.filter(conversation=conversation).first()
     
     if not document:
         logging.warning(f"⚠️ No se encontró un documento asociado a la conversación {conversation.id}.")
@@ -19,7 +19,9 @@ def retrieve_relevant_chunks(query, conversation,top_k=3):
     print(f"Recuperando chunks de: {document.title}")
 
     # Obtener solo los chunks del documento correcto
-    document_chunks = Chunk.objects.filter(document=document)
+    document_chunks = APIChunk.objects.filter(document=document)
+
+    print(document_chunks)
 
     # Si no hay chunks en la base de datos para este documento
     if not document_chunks.exists():

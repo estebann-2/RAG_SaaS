@@ -8,7 +8,7 @@ import chardet
 import logging
 import tracemalloc
 from concurrent.futures import ThreadPoolExecutor
-from .models import Chunk
+from .models import APIChunk
 from docx import Document
 
 # Configurar logging
@@ -39,7 +39,7 @@ def process_chunk(index, chunk, document):
     """Procesa y guarda un chunk en la base de datos."""
     try:
         chunk_embedding = embedding_model.embed_documents([chunk])[0]
-        Chunk.objects.create(document=document, content=chunk, embedding=chunk_embedding)
+        APIChunk.objects.create(document=document, content=chunk, embedding=chunk_embedding)
         return f"Chunk {index + 1} procesado"
     except Exception as e:
         return f"Error en chunk {index + 1}: {e}"
@@ -121,8 +121,8 @@ def process_document(document):
             batch_embeddings = embedding_model.embed_documents(batch_chunks)
 
             # Guardado en batch
-            Chunk.objects.bulk_create([
-                Chunk(document=document, content=batch_chunks[j], embedding=batch_embeddings[j])
+            APIChunk.objects.bulk_create([
+                APIChunk(document=document, content=batch_chunks[j], embedding=batch_embeddings[j])
                 for j in range(len(batch_chunks))
             ])
             print(f"Batch {i//batch_size + 1} procesado")
