@@ -35,15 +35,15 @@
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/RAG_SaaS.git
+git clone https://github.com/estebann-2/RAG_SaaS.git
 cd RAG_SaaS
 ```
 
 ### 2️⃣ Create a Virtual Environment & Install Dependencies
 
-```python
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+```bash
+conda create -n rag_saas python=3.12.7
+conda activate rag_saas
 pip install -r requirements.txt
 ```
 
@@ -61,28 +61,6 @@ python manage.py runserver
 
 Now, open your browser and go to:
 http://127.0.0.1:8000/
-
----
-
-## ⚡ Core Functionality
-
-### 🔹 Document Upload & Processing
-- Users upload a document (**PDF, DOCX, TXT, or Markdown**).
-- The text is extracted and **chunked** into smaller segments.
-- Each chunk is **embedded** using **OpenAI’s text-embedding-ada-002** or **FAISS**.
-- The embeddings are stored in a **FAISS vector database** for retrieval.
-
-### 🔹 Query Processing
-- Users enter **natural language questions** related to uploaded documents.
-- The system **retrieves relevant chunks** using **vector similarity search**.
-- The retrieved context is **fed into an LLM** (e.g., OpenAI GPT, LlamaIndex) to generate answers.
-
-### 🔹 API Endpoints (Django REST Framework)
-| **Endpoint**            | **Method** | **Description**            |
-|-------------------------|------------|----------------------------|
-| `/api/upload/`         | `POST`     | Upload a document          |
-| `/api/documents/`      | `GET`      | List uploaded documents    |
-| `/api/query/<doc_id>/` | `POST`     | Query a document           |
 
 ---
 
